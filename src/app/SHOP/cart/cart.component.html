@@ -1,0 +1,233 @@
+
+<!-- Breadcrumbs -->
+<div class="breadcrumbs-container">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <nav class="woocommerce-breadcrumb">
+                    <a href="index.html">Home</a>
+                    <span class="separator">/</span> Cart
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Breadcrumbs End -->
+<!-- Page title -->
+<div class="entry-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <h1 class="entry-title">Cart</h1>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 
+<div class="cart-page-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 col-sm-12 col-xs-12">
+          
+                <form action="#">
+               
+                    <div class="table-content table-responsive mb-50">
+                        <table>
+                            <thead>
+                                <tr  >
+                                    <th class="product-thumbnail">Image</th>
+                                    <th class="product-name">Product</th>
+                                    <th class="product-quantity">Quantity</th>
+                                    <th class="product-name">Total Price</th>
+                               
+                                  
+                                    <th class="product-quantity">Total Cbm</th>
+                                  
+                                    <th class="product-remove">Remove</th>
+                                </tr>
+                            </thead>
+                            <tbody >
+                                <tr *ngFor="let dataItem of cartlist  " style="text-align:center ;">
+                                    <td class="product-thumbnail" >
+                                        <a ><img class="cartimg" src="{{this.imageurl}}{{dataItem.singleimage }}" alt="cart-image"></a>
+                                    </td>
+                                    <td class="product-name"><a >{{dataItem.name}}</a></td>
+                                    <td class="product-quantity"><span>{{dataItem.qtyordered}}</span></td>
+                                    <td class="product-price"><span class="amount">{{dataItem.price}}</span></td>
+                                    
+                                    <td class="product-subtotal">{{dataItem.total}}</td>
+                                    <td class="product-remove"> <a (click)="removefromcart(dataItem.Product_ID)"><i class="fa fa-times" aria-hidden="true"></i></a></td>
+                                </tr>
+                        
+                            </tbody>
+                        </table>
+                    </div>
+                   
+                    <div class="row">
+                    
+                        <div class="col-md-4 col-sm-3 col-xs-12">
+                            <div class="buttons-cart">
+                           
+                                <a [routerLink]="['/products', '']">Continue Shopping</a>
+                            </div>
+                        </div>
+                
+                        <div class="col-md-4 col-sm-4 col-xs-12" style="background-color: #e9ecef!important;">
+                            <div class="cart_totals" tyle="text-align: left!important;" >
+                                <h4 style="text-align: left;">Container Info</h4>
+                                <br>
+                                <h6 style="text-align: left;">Container Type:<span style="color:#12A4DD"> 40' HQ</span></h6>
+                                <h6 style="text-align: left;">Total Cbm Remaining: <span style="color:#12A4DD"> {{this.totalcbmremaining }}  </span></h6>
+                                <h6 style="text-align: left;">Total Percentage Remaining: <span style="color:#12A4DD"> {{this.totalpercentageremaining | number : '1.2-2'}} % </span></h6>
+                            
+                            </div>
+                        </div>
+                     
+                        <div class="col-md-4 col-sm-5 col-xs-12">
+                            <div class="cart_totals" s>
+                                <h2 >Cart Totals</h2>
+                                <br>
+                                <table>
+                                    <tbody>
+                                        <tr class="cart-subtotal">
+                                            <th>Total Cbm:</th>
+                                            <td><span class="amount">{{this.totalcbm}} </span></td>
+                                        </tr>
+                                        <tr class="order-total">
+                                            <th>Total Price:</th>
+                                            <td>
+                                                <strong><span class="amount">{{this.subtotal}} $</span></strong>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <div class="wc-proceed-to-checkout">
+                                    <a [routerLink]="['/checkout']">Proceed to Checkout</a>
+                                </div>
+                            </div>
+                        </div>
+                     
+                    </div>
+            
+                </form>
+            
+            </div>
+        </div>
+    </div>
+</div> -->
+
+
+
+
+
+<div class="cart-page-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-7 col-sm-7 col-xs-12">
+                <!-- Form Start -->
+                <form action="#">
+                    <!-- Table Content Start -->
+                    <div class="table-content table-responsive">
+                        <table class="cart-items-table">
+                            <thead>
+                                <tr>
+                                    <th class="product-thumbnail">Image</th>
+                                    <th class="product-name">Product</th>
+                                    <th class="product-quantity">Quantity</th>
+                                    <th class="product-price">Total Price</th>
+                                    <th class="product-subtotal">Total CBM</th>
+                                    <th class="product-remove">Remove</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let dataItem of cartlist  ">
+                                    <td class="product-thumbnail">
+                                        <a [routerLink]="['/details', dataItem.Product_ID]"><img src="{{this.imageurl}}{{dataItem.singleimage }}" alt="cart-image"></a>
+                                    </td>
+                                    <td class="product-name"><a href="#">{{dataItem.name}}</a></td>
+                                    <td class="product-quantity">{{dataItem.qtyordered}}</td>
+                                    <td class="product-price"><span class="amount">
+                                        {{dataItem.price}}<small>$</small>
+                                        </span></td>
+                                    <td class="product-subtotal">{{dataItem.total}}</td>
+                                    <td class="product-remove"> <a (click)="removefromcart(dataItem.Product_ID)"><i class="fa fa-times" aria-hidden="true"></i></a></td>
+                                </tr>
+                         
+                            </tbody>
+                        </table>
+                        <table class="totals-table">
+                            <tbody>
+                                <tr>
+                                    <td class="product-total-row">TOTAL</td>
+                                    <!-- <td class="product-total-quantity"><span class="amount">{{this.totalcbm}} <small>qty</small></span>
+                                    </td> -->
+                                    <td class="product-total-price"><span class="amount">
+                                        {{this.subtotal}}<small>$</small>
+                                        </span></td>
+                                    <td class="product-total-cbm">{{this.totalcbm}} <small>cbm</small></td>
+                                    <!-- <td class="product-remove"> <a (click)="removefromcart(dataItem.Product_ID)"><i class="fa fa-times" aria-hidden="true"></i></a></td> -->
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- Table Content End -->
+                </form>
+
+            </div>
+
+            <div class="col-md-5 col-sm-5 col-xs-12">
+                <div class="cart-total-container padding-less">
+                    <!-- Cart Totals Start -->
+                    <div class="cart_totals">
+                        <h2>Cart Totals</h2>
+                        <br>
+                        <table>
+                            <tbody>
+                                <tr class="cbm-subtotal">
+                                    <th>Total CBM</th>
+                                    <td><span class="amount">{{this.totalcbm}}</span></td>
+                                </tr>
+                                <tr class="order-total">
+                                    <th>Total Price</th>
+                                    <td>
+                                        <strong><span class="amount">{{this.subtotal}}<small>$</small></span></strong>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- Cart Totals End -->
+                    <!-- Container Info Start -->
+                    <div class="container-info">
+                        <div class="container-size-choices">
+                            <select name="containerSize" id="ContainerSize">
+                                <!-- <option value="20'">Container 20'</option>
+                                <option value="40'">Container 40'</option> -->
+                                <option value="40 HQ" selected="">Container 40 HQ</option>
+                            </select>
+                        </div>
+                        <div class="cbm-remain">
+                            <span class="container-info-item">{{this.totalcbmremaining }} </span>
+                            <small>CBM Remaining</small>
+                        </div>
+                        <div class="cbm-remain-percentage">
+                            <span class="container-info-item">{{this.totalpercentageremaining | number : '1.2-2'}} %</span>
+                            <small>CBM Remaining %</small>
+                        </div>
+
+                    </div>
+
+                    <!-- Container Info End -->
+                    <!-- Cart Button Start -->
+                    <div class="wc-proceed-to-checkout">
+                        <a class="continue-shopping" [routerLink]="['/products','']">Continue Shopping</a>
+                        <a [routerLink]="['/checkout']">Proceed to Checkout</a>
+                    </div>
+                    <!-- Cart Button end -->
+                </div>
+            </div>
+        </div>
+        <!-- Row End -->
+
+    </div>
+</div>

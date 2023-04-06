@@ -1,0 +1,55 @@
+<div class="entry-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <h1 class="entry-title">Sign In</h1>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="login-page-area bg-login-form">
+    <div class="container center-login-form">
+        <div class="login-area">
+            <!-- New Customer Start -->
+            <div class="row">
+                <div class="col-md-12 login-form-area">
+                    <div class="well">
+                        <div class="return-customer">
+                            <h3 class="mb-10 custom-title">Welcome Back</h3>
+                            <p class="mb-20 weclome-back"><strong>Please enter a valid email and
+                                    password</strong></p>
+
+                            <form action="#" class="login-form-styles">
+                                <div class="form-group">
+                                    <input type="text" name="email" [(ngModel)]="email" placeholder="Email Address" id="input-email" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" name="pass" placeholder="Password" id="input-password" class="form-control" [(ngModel)]="password">
+                                </div>
+                                <div class="login-choices">
+                                    <!-- <div class="remember-me">
+                                        <input type="checkbox" name="rememberMe">
+                                        <p>Remember me</p>
+                                    </div> -->
+                                    <!-- <p class="lost-password"><a href="forgot-password.html">Forgot
+                                            password?</a></p> -->
+                                </div>
+
+
+                                <div class="login-btn-right">
+                                    <input type="submit" value="Login" class="return-customer-btn" (click)="login()">
+                                </div>
+                            </form>
+                        </div>
+                        <div class="new-customer">
+                            <p class="mtb-10">Don't have an account yet!</p>
+                            <a class="new-customer" [routerLink]="['/register']">Register</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- New Customer End -->
+
+            </div>
+        </div>
+    </div>
+</div>

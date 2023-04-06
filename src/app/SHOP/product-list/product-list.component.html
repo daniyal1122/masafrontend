@@ -1,0 +1,297 @@
+    <!-- HRADER AREA END -->
+    <!-- Breadcrumbs -->
+    <div class="breadcrumbs-container">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <nav class="woocommerce-breadcrumb">
+                        <a href="/">Home</a>
+                        <span class="separator">/</span> Shop
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Breadcrumbs End -->
+    
+    <!-- Shop page wraper -->
+    <div class="shop-page-wraper">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-md-3 sidebar-shop">
+                    <div class="sidebar-product-categori" >
+                        <div class="widget-title">
+                            <h6>PRODUCT CATEGORIES</h6>
+                        </div>
+                        <div class="widget-content">
+                            <ul class="product-categories">
+                                <li *ngFor="let dataItem of categoryList" class="cat-item">
+                                  
+                                    <i class="fa fa-angle-right" style="margin-right: 5px;position:inherit!important;font-size: 15px!important;"></i>  <a  [routerLink]="['/products', dataItem.name]"> {{dataItem.name}}</a>
+                                    <br>
+                                    <span  *ngFor="let dataItems of subcategoryList" style="display: inherit;">
+                                        
+                                    <a style="margin-left: 10px;" *ngIf="dataItem.name == dataItems.categoryname"  [routerLink]="['/products', dataItems.name]">- {{dataItems.name}}</a>
+                                 
+                                    <!-- <span class="count">(5)</span> --></span>
+                                </li>
+               
+                            </ul>
+                        </div>
+                        <!-- <div class="widget-title">
+                            <h3>Sub Categories</h3>
+                        </div>
+                        <div class="widget-content">
+                            <ul class="product-categories">
+                                <li  *ngFor="let dataItem of subcategoryList" class="cat-item">
+                                    <a [routerLink]="['/products', dataItem.name]">{{dataItem.name}}</a>
+                                 
+                                </li>
+               
+                            </ul>
+                        </div> -->
+                        <div class="widget-title">
+                            <h3>Brands</h3>
+                        </div>
+                        <div class="widget-content">
+                            <ul class="product-categories">
+                                <li *ngFor="let dataItem of BrandsList" class="cat-item">
+                                    <a  [routerLink]="['/brands', dataItem.brand_ID]" >{{dataItem.name}}</a>
+                                    
+                                    <!-- <span class="count">(5)</span> -->
+                                </li>
+               
+                            </ul>
+                        </div>
+                        <div class="product-filter mb-30" >
+                            <div class="widget-title">
+                                <h3>Filter by price</h3>
+                            </div>
+                            <div class="widget-content">
+                            
+                                <ngx-slider [(value)]="minValue" [(highValue)]="maxValue" [options]="options"></ngx-slider>
+                        
+                                  <div class="price-values">
+                                    <button class="button" type="submit" (click)="filterbyprice()">Filter</button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="widget-title"  hidden>
+                            <h3>SELECT BY COLOR</h3>
+                        </div>
+                        <div class="widget-content"  hidden>
+                            <ul class="product-categories">
+                                <li class="cat-item">
+                                    <a href="#">Gold</a>
+                                    <span class="count">(1)</span>
+                                </li>
+                                <li class="cat-item">
+                                    <a href="#">Green</a>
+                                    <span class="count">(1)</span>
+                                </li>
+                                <li class="cat-item">
+                                    <a href="#">White</a>
+                                    <span class="count">(1)</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="product-filter mb-30"  hidden>
+                            <div class="widget-title">
+                                <h3>TOP RATED PRODUCTS</h3>
+                            </div>
+                            <div class="widget-content">
+                                <ul class="product_list_widget">
+                                    <li class="widget-mini-product">
+                                        <div class="product-image">
+                                            <a title="Phasellus vel hendrerit" href="#">
+                                                <img alt="" src="./assets/images/product/2.jpg">
+                                            </a>
+                                        </div>
+                                        <div class="product-info">
+                                            <a title="Phasellus vel hendrerit" href="#">
+                                                <span class="product-title">Consequuntur magni</span>
+                                            </a>
+                                            <div class="star-rating">
+                                                <div class="rating-box">
+                                                    <span><i class="fa fa-star"></i></span>
+                                                    <span><i class="fa fa-star"></i></span>
+                                                    <span><i class="fa fa-star"></i></span>
+                                                    <span><i class="fa fa-star"></i></span>
+                                                    <span><i class="fa fa-star"></i></span>
+                                                </div>
+                                            </div>
+                                            <span class="woocommerce-Price-amount amount">
+                                                <span class="woocommerce-Price-currencySymbol">$</span>55.00</span>
+                                        </div>
+                                    </li>
+                                    <li class="widget-mini-product">
+                                        <div class="product-image">
+                                            <a title="Phasellus vel hendrerit" href="#">
+                                                <img alt="" src="./assets/images/product/3.jpg">
+                                            </a>
+                                        </div>
+                                        <div class="product-info">
+                                            <a title="Phasellus vel hendrerit" href="#">
+                                                <span class="product-title">Aliquam lobortis</span>
+                                            </a>
+                                            <div class="star-rating">
+                                                <div class="rating-box">
+                                                    <span><i class="fa fa-star"></i></span>
+                                                    <span><i class="fa fa-star"></i></span>
+                                                    <span><i class="fa fa-star"></i></span>
+                                                    <span><i class="fa fa-star"></i></span>
+                                                    <span><i class="fa fa-star"></i></span>
+                                                </div>
+                                            </div>
+                                            <span class="woocommerce-Price-amount amount">
+                                                <span class="woocommerce-Price-currencySymbol">$</span>55.00</span>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="sidebar-single-banner"  hidden>
+                            <a href="#">
+                                <img src="./assets/images/banner/shop-sidebar.jpg" alt="Banner">
+                            </a>
+                        </div>
+                        <div class="sidebar-tag"  hidden>
+                            <div class="widget-title">
+                                <h3>PRODUCT TAGS</h3>
+                            </div>
+                            <div class="widget-content">
+                                <div class="product-tags">
+                                    <a href="#">New </a>
+                                    <a href="#">brand</a>
+                                    <a href="#">black</a>
+                                    <a href="#">white</a>
+                                    <a href="#">chire</a>
+                                    <a href="#">table</a>
+                                    <a href="#">Lorem</a>
+                                    <a href="#">ipsum</a>
+                                    <a href="#">dolor</a>
+                                    <a href="#">sit</a>
+                                    <a href="#">amet</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-md-9 shop-content">
+                    <div class="shop-banner" >
+                        <img src="./assets/images/banner/shopcatbanner.jpg" alt="">
+                    </div>
+                    <div class="product-toolbar">
+                        <div class="topbar-title">
+                            <h1>Shop</h1>
+                        </div>
+                        <div class="product-toolbar-inner">
+                            <div class="product-view-mode" >
+                                <!-- <ul class="nav nav-tabs">
+                                    <li class="active"><a data-toggle="tab" href="#grid"><i class="ion-grid"></i></a></li>
+                                    <li><a data-toggle="tab" href="#list"><i class="ion-navicon"></i></a></li>
+                                </ul> -->
+                            </div>
+                            <p class="woocommerce-result-count"  style="float: left;">Showing {{p}}–10 of {{this.ProductsList.length}} results</p>
+                            <div class="woocommerce-ordering " style="float: right;">
+                                <form method="get" class="woocommerce-ordering hidden-xs">
+                                    <div class="orderby-wrapper ">
+                                        <label>Sort By :</label>
+                                        <select class="nice-select-menu orderby" style="display: none;">
+                                            <option value="popularity" (click)="SortBy('product_ID')">Sort by Ascending</option>
+                                            <option value="rating" (click)="SortBy('name')">Sort by Name</option>
+                                            <!-- <option value="date">Sort by Newest</option> -->
+                                            <!-- <option value="price">Sort by price: low to high</option>
+                                            <option value="price-desc">Sort by price: high to low</option> -->
+                                        </select>
+                                        <div class="nice-select nice-select-menu orderby" tabindex="0">
+                                            <span class="current">Default sorting</span><ul class="list">
+                                    
+                                                <option value="popularity" (click)="SortBy('product_ID')">Sort by Ascending</option>
+                                                <option value="rating" (click)="SortBy('name')">Sort by Name</option>
+                                                <!-- <option value="date">Sort by Newest</option>
+                                                <option value="price">Sort by price: low to high</option>
+                                                <option value="price-desc">Sort by price: high to low</option> -->
+                                            </ul></div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="shop-page-product-area tab-content">
+                            <div id="grid" class="tab-pane fade in show active">
+                                <div class="row">
+                                    <div class="col-sm-6 col-md-4 col-xl-3" *ngFor="let dataItem of ProductsList   | orderBy :this.orderby | paginate: { itemsPerPage: 10, currentPage: p }   ">
+                                        <div class="single-product-area">
+                                            <div class="product-wrapper gridview">
+                                                <div class="list-col4">
+                                                    <div class="product-image">
+                                                        <a href="#">
+                                                            <img style="height: 300px;" src="{{imageurl}}{{dataItem.singleImage }}" alt="">
+                                                        </a>
+                                                        <div class="quickviewbtn" >
+                                                            <a [routerLink]="['/details', dataItem.product_ID]" data-original-title="Quick View"><i style="color: #073b4c!important;" class="fa fa-search"></i></a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="list-col8">
+                                                    <div class="product-info">
+                                                        <h2 class="product-card-title" style="display: -webkit-box;
+                                                        -webkit-line-clamp: 1;
+                                                        -webkit-box-orient: vertical;
+                                                        overflow: hidden;
+                                                        text-overflow: ellipsis;"><a style="color: #073b4c!important;" >{{dataItem.name}}</a></h2>
+                                                        <!-- <div class="product-rattings">
+                                                            <span><i class="fa fa-star"></i></span>
+                                                            <span><i class="fa fa-star"></i></span>
+                                                            <span><i class="fa fa-star"></i></span>
+                                                            <span><i class="fa fa-star-half-o"></i></span>
+                                                            <span><i class="fa fa-star-o"></i></span>
+                                                        </div>  -->
+                                                    <div class="product-card-spans" >
+                                                        <ng-container *ngFor="let user of dataItem.price; last as isLast">
+                                                       <span *ngIf="isLast"  class="price">
+                                                        {{user.price}}<small>$</small>   
+                                                    </span>
+                                                </ng-container>
+                                                    <span   class="quantity">
+                                                        Min-Order: {{dataItem.minqty}}pcs
+                                                    </span>
+                                           
+                                                    
+                                                    </div>
+                                            
+                                                        
+                                                    </div>
+                                                    <div class="product-hidden">
+                                                        <div class="card-hover-flex">
+                                                         <div class="star-actions product-card-actions">
+                                                         </div>
+                                                         </div>
+                                                     </div>
+                                  
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                           
+                                  
+                                </div>
+                            </div>
+                  
+                        </div>
+                    </div>
+                    <pagination-controls (pageChange)="p = $event" class="float-right"></pagination-controls>
+                    <!-- <nav class="woocommerce-pagination" hidden>
+                        <ul class="page-numbers">
+                            <li><span aria-current="page" class="page-numbers current">1</span></li>
+                            <li><a class="page-numbers" href="#">2</a></li>
+                            <li><a class="page-numbers" href="#">3</a></li>
+                            <li><a class="page-numbers" href="#">4</a></li>
+                            <li><a class="next page-numbers" href="#">→</a></li>
+                        </ul>
+                    </nav> -->
+                </div>
+            </div>
+        </div> 
+    </div>

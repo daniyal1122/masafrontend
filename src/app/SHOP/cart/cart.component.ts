@@ -20,7 +20,10 @@ export class CartComponent implements OnInit {
  totalpercentageremaining:any=0;
  totalcbmremaining:any=0;
 <<<<<<< HEAD
+<<<<<<< HEAD
  totalquantityselected:any=0;
+=======
+>>>>>>> ed7d4e9eade1c34b7d004d7cc37cb28b81ededb7
 =======
 >>>>>>> ed7d4e9eade1c34b7d004d7cc37cb28b81ededb7
  imageurl:any=myGlobals.imageurl;
@@ -90,9 +93,13 @@ GetCartList()
     data => {
       this.cartlist = data; 
 <<<<<<< HEAD
+<<<<<<< HEAD
   this.cartlist.forEach(element => {
   this.totalquantityselected= Number(this.totalquantityselected) + Number(element.qtyordered) ;
   });
+=======
+  
+>>>>>>> ed7d4e9eade1c34b7d004d7cc37cb28b81ededb7
 =======
   
 >>>>>>> ed7d4e9eade1c34b7d004d7cc37cb28b81ededb7

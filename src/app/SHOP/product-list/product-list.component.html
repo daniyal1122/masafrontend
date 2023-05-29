@@ -6,7 +6,11 @@
                 <div class="col-sm-12">
                     <nav class="woocommerce-breadcrumb">
 <<<<<<< HEAD
+<<<<<<< HEAD
                         <a [routerLink]="['/']">Home</a>
+=======
+                        <a href="/">Home</a>
+>>>>>>> ed7d4e9eade1c34b7d004d7cc37cb28b81ededb7
 =======
                         <a href="/">Home</a>
 >>>>>>> ed7d4e9eade1c34b7d004d7cc37cb28b81ededb7
@@ -32,6 +36,7 @@
                                 <li *ngFor="let dataItem of categoryList" class="cat-item">
                                   
 <<<<<<< HEAD
+<<<<<<< HEAD
                                     <i class="fa fa-angle-right" style="margin-right: 5px;position:inherit!important;font-size: 15px!important;"  ></i>  <a   [routerLink]="['/products', dataItem.name]"> {{dataItem.name}}</a>
                                     <!-- <i class="fa fa-angle-right" style="margin-right: 5px;position:inherit!important;font-size: 15px!important;"  ></i>  <a  (click)="dataItem[1]==dataItem[1]" [routerLink]="['/products', dataItem.name]"> {{dataItem.name}}</a> -->
                                     <br>
@@ -41,12 +46,17 @@
                                     <span >  <a style="margin-left: 10px;" *ngIf="dataItem.name == dataItems.categoryname" (click)="subload(dataItems.name)" >- {{dataItems.name}}</a>
                                  </span>
 =======
+=======
+>>>>>>> ed7d4e9eade1c34b7d004d7cc37cb28b81ededb7
                                     <i class="fa fa-angle-right" style="margin-right: 5px;position:inherit!important;font-size: 15px!important;"></i>  <a  [routerLink]="['/products', dataItem.name]"> {{dataItem.name}}</a>
                                     <br>
                                     <span  *ngFor="let dataItems of subcategoryList" style="display: inherit;">
                                         
                                     <a style="margin-left: 10px;" *ngIf="dataItem.name == dataItems.categoryname"  [routerLink]="['/products', dataItems.name]">- {{dataItems.name}}</a>
                                  
+<<<<<<< HEAD
+>>>>>>> ed7d4e9eade1c34b7d004d7cc37cb28b81ededb7
+=======
 >>>>>>> ed7d4e9eade1c34b7d004d7cc37cb28b81ededb7
                                     <!-- <span class="count">(5)</span> --></span>
                                 </li>
@@ -72,7 +82,11 @@
                             <ul class="product-categories">
                                 <li *ngFor="let dataItem of BrandsList" class="cat-item">
 <<<<<<< HEAD
+<<<<<<< HEAD
                                     <a  [routerLink]="['/products', dataItem.name]" >{{dataItem.name}}</a>
+=======
+                                    <a  [routerLink]="['/brands', dataItem.brand_ID]" >{{dataItem.name}}</a>
+>>>>>>> ed7d4e9eade1c34b7d004d7cc37cb28b81ededb7
 =======
                                     <a  [routerLink]="['/brands', dataItem.brand_ID]" >{{dataItem.name}}</a>
 >>>>>>> ed7d4e9eade1c34b7d004d7cc37cb28b81ededb7
@@ -213,9 +227,13 @@
                                 </ul> -->
                             </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
                             <!-- <p class="woocommerce-result-count"  style="float: left;">Showing {{p}}–10 of {{this.ProductsList.length}} results</p> -->
                             <p class="woocommerce-result-count"  style="float: left;">Showing {{this.start==""?1:this.start }} - {{this.last==""?12:this.last}} of {{this.ProductsList.length}} results</p>
                            <!-- <a (click)="sortbyprice()"></a> -->
+=======
+                            <p class="woocommerce-result-count"  style="float: left;">Showing {{p}}–10 of {{this.ProductsList.length}} results</p>
+>>>>>>> ed7d4e9eade1c34b7d004d7cc37cb28b81ededb7
 =======
                             <p class="woocommerce-result-count"  style="float: left;">Showing {{p}}–10 of {{this.ProductsList.length}} results</p>
 >>>>>>> ed7d4e9eade1c34b7d004d7cc37cb28b81ededb7
@@ -224,8 +242,12 @@
                                     <div class="orderby-wrapper ">
                                         <label>Sort By :</label>
 <<<<<<< HEAD
+<<<<<<< HEAD
                                         <select  (change)="SortBy('name')"  class="nice-select-menu orderby" style="display: none
                                         ;"  >
+=======
+                                        <select class="nice-select-menu orderby" style="display: none;">
+>>>>>>> ed7d4e9eade1c34b7d004d7cc37cb28b81ededb7
 =======
                                         <select class="nice-select-menu orderby" style="display: none;">
 >>>>>>> ed7d4e9eade1c34b7d004d7cc37cb28b81ededb7
@@ -236,9 +258,14 @@
                                             <option value="price-desc">Sort by price: high to low</option> -->
                                         </select>
 <<<<<<< HEAD
+<<<<<<< HEAD
                                         <div class="nice-select nice-select-menu orderby" >
                                           
                                    
+=======
+                                        <div class="nice-select nice-select-menu orderby" tabindex="0">
+                                            <span class="current">Default sorting</span><ul class="list">
+>>>>>>> ed7d4e9eade1c34b7d004d7cc37cb28b81ededb7
 =======
                                         <div class="nice-select nice-select-menu orderby" tabindex="0">
                                             <span class="current">Default sorting</span><ul class="list">
@@ -250,8 +277,12 @@
                                                 <option value="price">Sort by price: low to high</option>
                                                 <option value="price-desc">Sort by price: high to low</option> -->
 <<<<<<< HEAD
+<<<<<<< HEAD
                                  
                                             </div>
+=======
+                                            </ul></div>
+>>>>>>> ed7d4e9eade1c34b7d004d7cc37cb28b81ededb7
 =======
                                             </ul></div>
 >>>>>>> ed7d4e9eade1c34b7d004d7cc37cb28b81ededb7
@@ -263,10 +294,15 @@
                             <div id="grid" class="tab-pane fade in show active">
                                 <div class="row">
 <<<<<<< HEAD
+<<<<<<< HEAD
                                     <ng-container *ngFor="let dataItem of ProductsList   | orderBy :this.orderby | paginate: { itemsPerPage: 12, currentPage: p }   ">
 
                                     <div class="col-sm-6 col-md-4 col-xl-3" *ngIf="dataItem.draft != 'true'" >
                                         <div class="single-product-area" >
+=======
+                                    <div class="col-sm-6 col-md-4 col-xl-3" *ngFor="let dataItem of ProductsList   | orderBy :this.orderby | paginate: { itemsPerPage: 10, currentPage: p }   ">
+                                        <div class="single-product-area">
+>>>>>>> ed7d4e9eade1c34b7d004d7cc37cb28b81ededb7
 =======
                                     <div class="col-sm-6 col-md-4 col-xl-3" *ngFor="let dataItem of ProductsList   | orderBy :this.orderby | paginate: { itemsPerPage: 10, currentPage: p }   ">
                                         <div class="single-product-area">
@@ -286,17 +322,23 @@
                                                     <div class="product-info">
                                                         <h2 class="product-card-title" style="display: -webkit-box;
 <<<<<<< HEAD
+<<<<<<< HEAD
                                                     
                                                         -webkit-box-orient: vertical;
                                                         overflow: hidden;
                                                         text-overflow: ellipsis;"><a  >{{dataItem.name}}</a></h2>
                                                         <div class="product-rattings">
 =======
+=======
+>>>>>>> ed7d4e9eade1c34b7d004d7cc37cb28b81ededb7
                                                         -webkit-line-clamp: 1;
                                                         -webkit-box-orient: vertical;
                                                         overflow: hidden;
                                                         text-overflow: ellipsis;"><a style="color: #073b4c!important;" >{{dataItem.name}}</a></h2>
                                                         <!-- <div class="product-rattings">
+<<<<<<< HEAD
+>>>>>>> ed7d4e9eade1c34b7d004d7cc37cb28b81ededb7
+=======
 >>>>>>> ed7d4e9eade1c34b7d004d7cc37cb28b81ededb7
                                                             <span><i class="fa fa-star"></i></span>
                                                             <span><i class="fa fa-star"></i></span>
@@ -304,7 +346,11 @@
                                                             <span><i class="fa fa-star-half-o"></i></span>
                                                             <span><i class="fa fa-star-o"></i></span>
 <<<<<<< HEAD
+<<<<<<< HEAD
                                                         </div> 
+=======
+                                                        </div>  -->
+>>>>>>> ed7d4e9eade1c34b7d004d7cc37cb28b81ededb7
 =======
                                                         </div>  -->
 >>>>>>> ed7d4e9eade1c34b7d004d7cc37cb28b81ededb7
@@ -313,6 +359,7 @@
                                                        <span *ngIf="isLast"  class="price">
                                                         {{user.price}}<small>$</small>   
                                                     </span>
+<<<<<<< HEAD
 <<<<<<< HEAD
                                                     </ng-container>
                                                     <span   class="quantity">
@@ -329,11 +376,16 @@
                                                         </ul>
                                                     </div>
 =======
+=======
+>>>>>>> ed7d4e9eade1c34b7d004d7cc37cb28b81ededb7
                                                 </ng-container>
                                                     <span   class="quantity">
                                                         Min-Order: {{dataItem.minqty}}pcs
                                                     </span>
                                            
+<<<<<<< HEAD
+>>>>>>> ed7d4e9eade1c34b7d004d7cc37cb28b81ededb7
+=======
 >>>>>>> ed7d4e9eade1c34b7d004d7cc37cb28b81ededb7
                                                     
                                                     </div>
@@ -352,6 +404,7 @@
                                         </div>
                                     </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
                                     </ng-container>
                                   
                                   </div>
@@ -361,6 +414,8 @@
                     </div>
                     <pagination-controls (pageChange)="listCount($event)" (pageChange)="p = $event"  (pageChange)="listCount($event)" class="float-right"></pagination-controls>
 =======
+=======
+>>>>>>> ed7d4e9eade1c34b7d004d7cc37cb28b81ededb7
                            
                                   
                                 </div>
@@ -369,6 +424,9 @@
                         </div>
                     </div>
                     <pagination-controls (pageChange)="p = $event" class="float-right"></pagination-controls>
+<<<<<<< HEAD
+>>>>>>> ed7d4e9eade1c34b7d004d7cc37cb28b81ededb7
+=======
 >>>>>>> ed7d4e9eade1c34b7d004d7cc37cb28b81ededb7
                     <!-- <nav class="woocommerce-pagination" hidden>
                         <ul class="page-numbers">

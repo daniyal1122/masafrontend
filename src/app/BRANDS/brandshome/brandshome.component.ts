@@ -10,8 +10,12 @@ import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
   selector: 'app-brandshome',
   templateUrl: './brandshome.component.html',
 <<<<<<< HEAD
+<<<<<<< HEAD
   styleUrls: ['./brandshome.component.css'],
   
+=======
+  styleUrls: ['./brandshome.component.css']
+>>>>>>> ed7d4e9eade1c34b7d004d7cc37cb28b81ededb7
 =======
   styleUrls: ['./brandshome.component.css']
 >>>>>>> ed7d4e9eade1c34b7d004d7cc37cb28b81ededb7

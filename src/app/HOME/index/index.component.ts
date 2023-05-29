@@ -81,7 +81,11 @@ value:any="";
       },
       940: {
 <<<<<<< HEAD
+<<<<<<< HEAD
         items: 5,
+=======
+        items: 5
+>>>>>>> ed7d4e9eade1c34b7d004d7cc37cb28b81ededb7
 =======
         items: 5
 >>>>>>> ed7d4e9eade1c34b7d004d7cc37cb28b81ededb7
@@ -119,7 +123,11 @@ value:any="";
     touchDrag: true,
     pullDrag: true,
 <<<<<<< HEAD
+<<<<<<< HEAD
     dots: false,
+=======
+    dots: true,
+>>>>>>> ed7d4e9eade1c34b7d004d7cc37cb28b81ededb7
 =======
     dots: true,
 >>>>>>> ed7d4e9eade1c34b7d004d7cc37cb28b81ededb7
@@ -214,7 +222,11 @@ value:any="";
   {
     this.sharedService.getProducts().subscribe(data =>{ 
 <<<<<<< HEAD
+<<<<<<< HEAD
      
+=======
+      console.log(data);
+>>>>>>> ed7d4e9eade1c34b7d004d7cc37cb28b81ededb7
 =======
       console.log(data);
 >>>>>>> ed7d4e9eade1c34b7d004d7cc37cb28b81ededb7

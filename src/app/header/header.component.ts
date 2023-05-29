@@ -77,7 +77,11 @@ export class HeaderComponent implements OnInit {
     this.sharedService.getProducts().subscribe(data =>{ 
      this.productlist=data;
 <<<<<<< HEAD
+<<<<<<< HEAD
      
+=======
+     console.log(this.productlist);
+>>>>>>> ed7d4e9eade1c34b7d004d7cc37cb28b81ededb7
 =======
      console.log(this.productlist);
 >>>>>>> ed7d4e9eade1c34b7d004d7cc37cb28b81ededb7

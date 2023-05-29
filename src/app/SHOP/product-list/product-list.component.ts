@@ -1,5 +1,9 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Component, OnInit ,ViewChildren} from '@angular/core';
+=======
+import { Component, OnInit } from '@angular/core';
+>>>>>>> ed7d4e9eade1c34b7d004d7cc37cb28b81ededb7
 =======
 import { Component, OnInit } from '@angular/core';
 >>>>>>> ed7d4e9eade1c34b7d004d7cc37cb28b81ededb7
@@ -26,8 +30,11 @@ import * as $ from 'jquery'
 })
 export class ProductListComponent implements OnInit {
 <<<<<<< HEAD
+<<<<<<< HEAD
   @ViewChildren('childItem') childItem:any;
 
+=======
+>>>>>>> ed7d4e9eade1c34b7d004d7cc37cb28b81ededb7
 =======
 >>>>>>> ed7d4e9eade1c34b7d004d7cc37cb28b81ededb7
   imageurl=myGlobals.imageurl;
@@ -44,12 +51,16 @@ export class ProductListComponent implements OnInit {
   maxValue: number = 10000;
   orderby:any="";
 <<<<<<< HEAD
+<<<<<<< HEAD
   start:any="";
   last:any="";
   title:any;
   menuList:any;
   selected:any;
   subSelected:any;
+=======
+  
+>>>>>>> ed7d4e9eade1c34b7d004d7cc37cb28b81ededb7
 =======
   
 >>>>>>> ed7d4e9eade1c34b7d004d7cc37cb28b81ededb7
@@ -68,9 +79,13 @@ export class ProductListComponent implements OnInit {
     }
   };
 <<<<<<< HEAD
+<<<<<<< HEAD
   constructor(private route:ActivatedRoute,private sharedService:SharedService,private router:Router) {
     localStorage.setItem('variationselectvalue', "");
    }
+=======
+  constructor(private route:ActivatedRoute,private sharedService:SharedService,private router:Router) { }
+>>>>>>> ed7d4e9eade1c34b7d004d7cc37cb28b81ededb7
 =======
   constructor(private route:ActivatedRoute,private sharedService:SharedService,private router:Router) { }
 >>>>>>> ed7d4e9eade1c34b7d004d7cc37cb28b81ededb7
@@ -80,12 +95,16 @@ export class ProductListComponent implements OnInit {
   ngOnInit(): void {
   
 <<<<<<< HEAD
+<<<<<<< HEAD
     if (!localStorage.getItem('foo')) { 
       localStorage.setItem('foo', 'no reload') 
       location.reload() 
     } else {
       localStorage.removeItem('foo') 
     }
+=======
+    
+>>>>>>> ed7d4e9eade1c34b7d004d7cc37cb28b81ededb7
 =======
     
 >>>>>>> ed7d4e9eade1c34b7d004d7cc37cb28b81ededb7
@@ -124,7 +143,11 @@ export class ProductListComponent implements OnInit {
       this.ProductsList = this.ProductsList.filter((x:any) => x.categoryname.toLowerCase() == this.categoryname.toLowerCase() || x.brandname.toLowerCase() == this.categoryname.toLowerCase() || x.subcategoryname.toLowerCase() == this.categoryname.toLowerCase() || x.name.toLowerCase().includes(this.categoryname.toLowerCase() ) ); 
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
   
+=======
+    console.log(this.ProductsList);
+>>>>>>> ed7d4e9eade1c34b7d004d7cc37cb28b81ededb7
 =======
     console.log(this.ProductsList);
 >>>>>>> ed7d4e9eade1c34b7d004d7cc37cb28b81ededb7
@@ -194,9 +217,15 @@ export class ProductListComponent implements OnInit {
     if( this.ProductsListtemp[i]  )
     this.ProductsListtemp[i].price.forEach((element:any )=> {
 <<<<<<< HEAD
+<<<<<<< HEAD
     
       let pricenum=Number(element.price);
     
+=======
+      console.log(element);
+      let pricenum=Number(element.price);
+      console.log(this.minValue + "ss" + this.maxValue + "sss" + pricenum)
+>>>>>>> ed7d4e9eade1c34b7d004d7cc37cb28b81ededb7
 =======
       console.log(element);
       let pricenum=Number(element.price);
@@ -222,6 +251,7 @@ export class ProductListComponent implements OnInit {
     // this.ProductsFilterList.forEach((element:any )=> {
     //   this.ProductsList.push(element);
     // });
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -251,6 +281,8 @@ export class ProductListComponent implements OnInit {
   }
 
 =======
+=======
+>>>>>>> ed7d4e9eade1c34b7d004d7cc37cb28b81ededb7
     console.log(this.ProductsList+ "/////////////////");
 
   }
@@ -260,5 +292,8 @@ export class ProductListComponent implements OnInit {
 
   }
   
+<<<<<<< HEAD
+>>>>>>> ed7d4e9eade1c34b7d004d7cc37cb28b81ededb7
+=======
 >>>>>>> ed7d4e9eade1c34b7d004d7cc37cb28b81ededb7
 }

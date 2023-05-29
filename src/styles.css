@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 .single-product-area .gridview:hover h2 a {
     color: #ffffff!important;
 }
@@ -13,6 +14,8 @@
 
 
 
+=======
+>>>>>>> ed7d4e9eade1c34b7d004d7cc37cb28b81ededb7
 table, th, td {
     /* border: 1px solid black; */
     border-collapse: collapse;
@@ -24,9 +27,12 @@ table, th, td {
   .post-thumbnail a img {
     width: 100%;
     height: 350px;
+<<<<<<< HEAD
 
     object-fit: cover;
 
+=======
+>>>>>>> ed7d4e9eade1c34b7d004d7cc37cb28b81ededb7
 }
 .single-product-area .gridview h2 a {
 
@@ -687,9 +693,15 @@ li.tabs__tab.active.ng-star-inserted {
   width: 100%;
   float: left;
 }
+
 /* a:focus {
   outline: none;
 } */
+
+/* a:focus {
+  outline: none;
+} */
+
 
 .contact-submit input {
 

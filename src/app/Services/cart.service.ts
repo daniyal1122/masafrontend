@@ -32,6 +32,7 @@ export class CartService {
     addToCart(cart: Cart) {
      this.tempitems=JSON.parse(localStorage.getItem('cartitemslist') || '[]');
 <<<<<<< HEAD
+<<<<<<< HEAD
     //  console.log(this.tempitems);
     //  for(let item of this.tempitems)
     //  {
@@ -65,10 +66,15 @@ export class CartService {
         }
   
 =======
+=======
+>>>>>>> ed7d4e9eade1c34b7d004d7cc37cb28b81ededb7
       if(this.temparray != null)
       {
         this.tempitems.push(cart);
         localStorage.setItem("cartitemslist",JSON.stringify(this.tempitems)) ;
+<<<<<<< HEAD
+>>>>>>> ed7d4e9eade1c34b7d004d7cc37cb28b81ededb7
+=======
 >>>>>>> ed7d4e9eade1c34b7d004d7cc37cb28b81ededb7
       }
       else

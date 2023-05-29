@@ -124,9 +124,13 @@ img.main-logo {
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 .blog-page article {
     padding: 30px 30px;
 }
+=======
+
+>>>>>>> ed7d4e9eade1c34b7d004d7cc37cb28b81ededb7
 =======
 
 >>>>>>> ed7d4e9eade1c34b7d004d7cc37cb28b81ededb7
@@ -792,17 +796,23 @@ input[type="submit"] {
 
 .single-product-area .gridview .product-rattings {
 <<<<<<< HEAD
+<<<<<<< HEAD
     /* height: 30px;
     margin-top: -6px; */
     float: unset;
     /* margin-bottom: 7px;
     line-height: unset; */
 =======
+=======
+>>>>>>> ed7d4e9eade1c34b7d004d7cc37cb28b81ededb7
     height: 30px;
     margin-top: -6px;
     float: unset;
     margin-bottom: 7px;
     line-height: unset;
+<<<<<<< HEAD
+>>>>>>> ed7d4e9eade1c34b7d004d7cc37cb28b81ededb7
+=======
 >>>>>>> ed7d4e9eade1c34b7d004d7cc37cb28b81ededb7
 }
 
@@ -1446,7 +1456,11 @@ input[type="submit"] {
 .woocommerce-breadcrumb,
 .breadcrumbs {
 <<<<<<< HEAD
+<<<<<<< HEAD
     /* border-bottom: 1px solid #116f945c; */
+=======
+    border-bottom: 1px solid #116f945c;
+>>>>>>> ed7d4e9eade1c34b7d004d7cc37cb28b81ededb7
 =======
     border-bottom: 1px solid #116f945c;
 >>>>>>> ed7d4e9eade1c34b7d004d7cc37cb28b81ededb7
@@ -1502,7 +1516,10 @@ input[type="submit"] {
 .widget-content .product-tags a {
     color: #116f94;
 <<<<<<< HEAD
+<<<<<<< HEAD
     
+=======
+>>>>>>> ed7d4e9eade1c34b7d004d7cc37cb28b81ededb7
 =======
 >>>>>>> ed7d4e9eade1c34b7d004d7cc37cb28b81ededb7
 }
@@ -2540,7 +2557,11 @@ nav.woocommerce-pagination ul.page-numbers li a:hover {
 ---------------------------------------------- */
 .blog-page article {
 <<<<<<< HEAD
+<<<<<<< HEAD
     padding: 30px 17%;
+=======
+    padding: 30px 30px;
+>>>>>>> ed7d4e9eade1c34b7d004d7cc37cb28b81ededb7
 =======
     padding: 30px 30px;
 >>>>>>> ed7d4e9eade1c34b7d004d7cc37cb28b81ededb7
@@ -3217,7 +3238,10 @@ textarea {
 .footer-menu ul li a {
     color: #ffffff;
 <<<<<<< HEAD
+<<<<<<< HEAD
     text-transform: none;
+=======
+>>>>>>> ed7d4e9eade1c34b7d004d7cc37cb28b81ededb7
 =======
 >>>>>>> ed7d4e9eade1c34b7d004d7cc37cb28b81ededb7
 }

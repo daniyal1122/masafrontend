@@ -6,7 +6,11 @@ import { environment } from './environments/environment';
 
 if (environment.production) {
 <<<<<<< HEAD
+<<<<<<< HEAD
   // enableProdMode();
+=======
+  enableProdMode();
+>>>>>>> ed7d4e9eade1c34b7d004d7cc37cb28b81ededb7
 =======
   enableProdMode();
 >>>>>>> ed7d4e9eade1c34b7d004d7cc37cb28b81ededb7

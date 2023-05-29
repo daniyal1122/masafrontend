@@ -12,6 +12,7 @@ import { NgxSpinnerService } from 'ngx-spinner';
 export class AppComponent {
   title = 'B2BFrontEnd';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   check:string="";
   imageurl:string=myGlobals.imageurl;
@@ -20,6 +21,8 @@ export class AppComponent {
     window.scrollTo(0, 0)
     // this.typeSelected = 'fire';
 =======
+=======
+>>>>>>> ed7d4e9eade1c34b7d004d7cc37cb28b81ededb7
   typeSelected: string;
   check:string="";
   imageurl:string=myGlobals.imageurl;
@@ -27,11 +30,15 @@ export class AppComponent {
    
     window.scrollTo(0, 0)
     this.typeSelected = 'fire';
+<<<<<<< HEAD
+>>>>>>> ed7d4e9eade1c34b7d004d7cc37cb28b81ededb7
+=======
 >>>>>>> ed7d4e9eade1c34b7d004d7cc37cb28b81ededb7
 
   }
   ngOnInit() {
 
+<<<<<<< HEAD
 <<<<<<< HEAD
     this.spinner.show();
 
@@ -39,6 +46,9 @@ export class AppComponent {
       /** spinner ends after 5 seconds */
       this.spinner.hide();
     }, 4000);
+=======
+
+>>>>>>> ed7d4e9eade1c34b7d004d7cc37cb28b81ededb7
 =======
 
 >>>>>>> ed7d4e9eade1c34b7d004d7cc37cb28b81ededb7

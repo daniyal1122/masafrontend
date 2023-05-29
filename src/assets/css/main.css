@@ -2774,9 +2774,15 @@ li.megamenu-img a {
     display: block;
     font-family: Open Sans, Arial, Helvetica, sans-serif;
 <<<<<<< HEAD
+<<<<<<< HEAD
     font-size: 1.2em;
     margin: 0;
     padding: 9px;
+=======
+    font-size: 1em;
+    margin: 0;
+    padding: 0;
+>>>>>>> ed7d4e9eade1c34b7d004d7cc37cb28b81ededb7
 =======
     font-size: 1em;
     margin: 0;
@@ -6744,7 +6750,11 @@ a.ideas-btn {
 a.ideas-btn:hover {
     background-color: #2A2A2A;
 <<<<<<< HEAD
+<<<<<<< HEAD
     border-color: #2A2A2A;
+=======
+    border-color: ##2A2A2A;
+>>>>>>> ed7d4e9eade1c34b7d004d7cc37cb28b81ededb7
 =======
     border-color: ##2A2A2A;
 >>>>>>> ed7d4e9eade1c34b7d004d7cc37cb28b81ededb7

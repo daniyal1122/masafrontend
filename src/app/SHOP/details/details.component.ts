@@ -28,7 +28,11 @@ export class DetailsComponent implements OnInit {
   id: number=0;
   private sub: any;
 <<<<<<< HEAD
+<<<<<<< HEAD
   qtyselected:any="100";
+=======
+  qtyselected:any="";
+>>>>>>> ed7d4e9eade1c34b7d004d7cc37cb28b81ededb7
 =======
   qtyselected:any="";
 >>>>>>> ed7d4e9eade1c34b7d004d7cc37cb28b81ededb7
@@ -73,8 +77,12 @@ moq:number=0;
 metatitle:string="";
 metadesc:string="";
 <<<<<<< HEAD
+<<<<<<< HEAD
 variationselectvalue:any=localStorage.getItem('variationselectvalue') ;
 variationpreselected:any="";
+=======
+
+>>>>>>> ed7d4e9eade1c34b7d004d7cc37cb28b81ededb7
 =======
 
 >>>>>>> ed7d4e9eade1c34b7d004d7cc37cb28b81ededb7
@@ -154,8 +162,13 @@ customOptions4: OwlOptions = {
   constructor(private route:ActivatedRoute,private sharedService:SharedService,private viewportScroller: ViewportScroller,private router:Router,private comp: HeaderComponent, private cartService: CartService,private _sanitizer: DomSanitizer,  private titleService: Title,  
     private metaTagService: Meta,private readonly activatedRoute: ActivatedRoute  ) {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
       this.variationselectvalue=localStorage.getItem('variationselectvalue') ;
+=======
+    
+   
+>>>>>>> ed7d4e9eade1c34b7d004d7cc37cb28b81ededb7
 =======
     
    
@@ -173,7 +186,10 @@ customOptions4: OwlOptions = {
 
   ngOnInit(): void {
 <<<<<<< HEAD
+<<<<<<< HEAD
     
+=======
+>>>>>>> ed7d4e9eade1c34b7d004d7cc37cb28b81ededb7
 =======
 >>>>>>> ed7d4e9eade1c34b7d004d7cc37cb28b81ededb7
     window.scroll(0,0)
@@ -236,6 +252,7 @@ window.location.reload();
         this.attributes=JSON.parse(this.ProductObj.attributevalue);
         this.attributevalue=this.attributes["attributesdynamic"];
 <<<<<<< HEAD
+<<<<<<< HEAD
         this.ProductObj.variations=<any> JSON.parse( <any> this.ProductObj.variations);
   
         let ver=<any> this.ProductObj.variations;
@@ -248,6 +265,9 @@ window.location.reload();
       //  console.log(vervalue[item].key+"----------"+vervalue[item].value);
        this.variationpreselected=vervalue[item].value
    }
+=======
+      
+>>>>>>> ed7d4e9eade1c34b7d004d7cc37cb28b81ededb7
 =======
       
 >>>>>>> ed7d4e9eade1c34b7d004d7cc37cb28b81ededb7
@@ -295,7 +315,10 @@ this.metaTagService.updateTag({ name: 'description', content:  this.metadesc  })
      let ver=<any> this.ProductsList[i].variations;
      let vervalue=ver["variationdynamic"];
 <<<<<<< HEAD
+<<<<<<< HEAD
      
+=======
+>>>>>>> ed7d4e9eade1c34b7d004d7cc37cb28b81ededb7
 =======
 >>>>>>> ed7d4e9eade1c34b7d004d7cc37cb28b81ededb7
      this.variationarry.push(vervalue);
@@ -337,7 +360,11 @@ this.metaTagService.updateTag({ name: 'description', content:  this.metadesc  })
       this.ProductsListrelated = this.ProductsListrelated.filter((x:any) => x.categoryname.toLowerCase() == this.categoryname.toLowerCase()  ); 
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
    
+=======
+    console.log(this.ProductsListrelated);
+>>>>>>> ed7d4e9eade1c34b7d004d7cc37cb28b81ededb7
 =======
     console.log(this.ProductsListrelated);
 >>>>>>> ed7d4e9eade1c34b7d004d7cc37cb28b81ededb7
@@ -360,7 +387,11 @@ this.metaTagService.updateTag({ name: 'description', content:  this.metadesc  })
 
     
 <<<<<<< HEAD
+<<<<<<< HEAD
  
+=======
+      console.log("1st sections");
+>>>>>>> ed7d4e9eade1c34b7d004d7cc37cb28b81ededb7
 =======
       console.log("1st sections");
 >>>>>>> ed7d4e9eade1c34b7d004d7cc37cb28b81ededb7
@@ -370,10 +401,14 @@ this.metaTagService.updateTag({ name: 'description', content:  this.metadesc  })
   {
     
 <<<<<<< HEAD
+<<<<<<< HEAD
     this.variationselectvalue=null;
     localStorage.setItem('variationselectvalue', value);
 
     this.variationselectvalue=localStorage.getItem('variationselectvalue') ;
+=======
+   
+>>>>>>> ed7d4e9eade1c34b7d004d7cc37cb28b81ededb7
 =======
    
 >>>>>>> ed7d4e9eade1c34b7d004d7cc37cb28b81ededb7
@@ -386,15 +421,21 @@ this.metaTagService.updateTag({ name: 'description', content:  this.metadesc  })
 
    //to seperate size and color strings
 <<<<<<< HEAD
+<<<<<<< HEAD
    
    if(this.ProductsList[i].product_ID != this.productidcurrent)
    {  
     
 =======
+=======
+>>>>>>> ed7d4e9eade1c34b7d004d7cc37cb28b81ededb7
    console.log(this.ProductsList[i].product_ID );
    console.log(this.productidcurrent);
    if(this.ProductsList[i].product_ID != this.productidcurrent)
    {  
+<<<<<<< HEAD
+>>>>>>> ed7d4e9eade1c34b7d004d7cc37cb28b81ededb7
+=======
 >>>>>>> ed7d4e9eade1c34b7d004d7cc37cb28b81ededb7
    for (let item in vervalue) {
 
@@ -403,6 +444,7 @@ this.metaTagService.updateTag({ name: 'description', content:  this.metadesc  })
       {
        this.sharedService.GetbyIDProducts(this.ProductsList[i].product_ID).subscribe(res => {
         this.ProductObj = res;
+<<<<<<< HEAD
 <<<<<<< HEAD
         let url: string = "/details/" + this.ProductObj.product_ID
         this.router.navigateByUrl(url);
@@ -460,6 +502,8 @@ this.metaTagService.updateTag({ name: 'description', content:  this.metadesc  })
 // window.location.reload();
 // }
 =======
+=======
+>>>>>>> ed7d4e9eade1c34b7d004d7cc37cb28b81ededb7
        
         this.title=this.ProductObj.name;
         this.price=this.price;
@@ -507,6 +551,9 @@ this.metaTagService.updateTag({ name: 'description', content:  this.metadesc  })
         this.variationarry=[];
         this.refreshtable(this.ProductObj.modelno);
         
+<<<<<<< HEAD
+>>>>>>> ed7d4e9eade1c34b7d004d7cc37cb28b81ededb7
+=======
 >>>>>>> ed7d4e9eade1c34b7d004d7cc37cb28b81ededb7
         // this.variationbuttons();
   

@@ -1,0 +1,27 @@
+html>body>app-root>div>app-details>div:nth-of-type(3)>div:nth-of-type(1)>div>div>div:nth-of-type(1)>div>div>div:nth-of-type(2)>div>div>owl-carousel-o>div>div:nth-of-type(1)>owl-stage>div>div>div:nth-of-type(1){
+    display: flex;
+    width: auto!important;
+}
+/* .owl-carousel .owl-stage-outer {
+   
+    width: 800px;
+   
+} */
+:host(.categori-menu-list)
+{
+ display: none!important;
+}
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-track {
+    border-radius: 8px;
+    background-color: #e7e7e7;
+    border: 1px solid #cacaca;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+    background-color: #116f94;
+}

@@ -1,0 +1,151 @@
+
+
+<div class="breadcrumbs-container">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <nav class="woocommerce-breadcrumb">
+                    <a href="/">Home</a>
+                    <span class="separator">/</span> Brands 
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="entry-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12"  style="text-align: center;">
+              <img style="height: 200px; ;" src="{{imageurl}}{{this.brandimage}}" class="brandzoneimage" alt="">
+                <!-- <h1 class="entry-title">
+                  <img style="height: 50px; ;" src="{{imageurl}}{{this.brandimage}}" class="brandzoneimage" alt="">
+                  <br>
+                  {{this.brandname}}
+           
+                 
+
+                </h1> -->
+                
+            </div>
+            <!-- <div class="col-sm-12">
+                <h1 class="entry-title">Evvoli</h1>
+            </div> -->
+        </div>
+    </div>
+</div>
+<<<<<<< HEAD
+
+<tabs>
+    
+    <tab tabTitle="Home" [active]=true class="tab-background">
+        
+      <!-- <img style="height: 410px; ;" src="{{imageurl}}{{this.brandimage}}" class="brandzoneimage" alt=""> -->
+      <h1  class="entry-title">
+=======
+<tabs>
+    <tab tabTitle="Home">
+      <!-- <img style="height: 410px; ;" src="{{imageurl}}{{this.brandimage}}" class="brandzoneimage" alt=""> -->
+      <h1 class="entry-title">
+>>>>>>> ed7d4e9eade1c34b7d004d7cc37cb28b81ededb7
+        <!-- <img style="height: 50px; ;" src="{{imageurl}}{{this.brandimage}}" class="brandzoneimage" alt=""> -->
+        <br>
+        {{this.brandname}}
+ 
+       
+
+      </h1>
+      <div  [innerHTML]="this.brandtext"></div>
+  </tab>
+<<<<<<< HEAD
+
+=======
+>>>>>>> ed7d4e9eade1c34b7d004d7cc37cb28b81ededb7
+  <tab *ngFor="let dataItems of categoryList" tabTitle="{{dataItems.name}}">
+    <div class="shop-page-product-area tab-content">
+      <div id="grid" class="tab-pane fade in show active">
+          <div class="row">
+              <div class="col-sm-6 col-md-4 col-xl-3" *ngFor="let dataItem of ProductsList  | filterCategories : dataItems.name   ">
+                  <div class="single-product-area">
+                    <div class="product-wrapper gridview">
+                        <div class="list-col4">
+                            <div class="product-image">
+                                <a href="#">
+                                    <img src="{{imageurl}}{{dataItem.singleImage }}" alt="">
+                                </a>
+                                <div class="quickviewbtn" >
+                                    <a [routerLink]="['/details', dataItem.product_ID]" data-original-title="Quick View"><i style="color: #073b4c!important;" class="fa fa-search"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="list-col8">
+                            <div class="product-info">
+                                <h2 class="product-card-title" style="display: -webkit-box;
+                                -webkit-line-clamp: 2;
+                                -webkit-box-orient: vertical;
+                                overflow: hidden;
+                                text-overflow: ellipsis;"><a style="color: #073b4c!important;" >{{dataItem.name}}</a></h2>
+                                <!-- <div class="product-rattings">
+                                    <span><i class="fa fa-star"></i></span>
+                                    <span><i class="fa fa-star"></i></span>
+                                    <span><i class="fa fa-star"></i></span>
+                                    <span><i class="fa fa-star-half-o"></i></span>
+                                    <span><i class="fa fa-star-o"></i></span>
+                                </div>  -->
+                            <div class="product-card-spans" >
+                                <ng-container *ngFor="let user of dataItem.price; last as isLast">
+                               <span *ngIf="isLast"  class="price">
+                                {{user.price}}<small>$</small>   
+                            </span>
+                        </ng-container>
+                            <span   class="quantity">
+                                Min-Order: {{dataItem.minqty}}pcs
+                            </span>
+                   
+                            
+                            </div>
+                    
+                                
+                            </div>
+                            <div class="product-hidden">
+                                <div class="card-hover-flex">
+                                 <div class="star-actions product-card-actions">
+                                 </div>
+                                 </div>
+                             </div>
+          
+                        </div>
+                    </div>
+                  </div>
+              </div>
+     
+            
+          </div>
+      </div>
+
+  </div>
+  </tab>
+
+</tabs>
+<!-- <div class="tab" style="padding: 20px;">
+    <button class="tablinks active" onclick="openCity(event, 'London')">Home</button>
+    <button *ngFor="let dataItem of categoryList" class="tablinks" ng-click="openCity(event,dataItem.name)">{{dataItem.name}}</button>
+  
+  </div>
+  
+  <div id="London" class="tabcontent" style="display: block;padding: 20px;background-color: white;">
+    <img style="height: 410px; ;" src="{{imageurl}}{{this.brandimage}}" class="brandzoneimage" alt="">
+ 
+    <div  [innerHTML]="this.brandtext"></div>
+  </div>
+  
+  <div *ngFor="let dataItem of categoryList" id="{{dataItem.name}}" class="tabcontent" style="padding: 20px;">
+    <h3>{{dataItem.name}}</h3>
+   
+  </div>
+   -->
+  <!-- <div id="Tokyo" class="tabcontent" style="padding: 20px;">
+    <h3>Tokyo</h3>
+    <p>Tokyo is the capital of Japan.</p>
+  </div> -->
+

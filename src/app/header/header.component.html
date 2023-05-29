@@ -1,0 +1,309 @@
+<header class="header-area">
+    <!-- Header top area start -->
+    <div class="header-top-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-sm-6">
+                    <div class="top-bar-left">
+                        <!-- welcome -->
+                        <div class="welcome">
+                            <p> UAE's Fastest Online Shopping Destination.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-sm-12">
+                    <div class="topbar-nav">
+                        <div class="wpb_wrapper">
+                            <!-- my account -->
+                            <div class="menu-my-account-container" >
+                                  <a href="#">Account <i class="ion-ios-locked"></i>  </a>
+                                <ul>
+                                    <li><a [routerLink]="['/my-account']" >My Account</a></li>
+                                <li><a [routerLink]="['/register']" >Register</a></li>
+                                <li><a  [routerLink]="['/login']" >Login</a></li>
+                                    <li><a [routerLink]="['/checkout']" >Checkout</a></li>
+                                </ul>
+                            </div>
+                            <div class="switcher" hidden>
+                                <!-- language-menu -->
+                                <div class="language">
+                                    <a href="#">
+                                        <img src="./assets/images/icons/en.png" alt="language-selector">English
+                                        <i class="ion-ios-arrow-down"></i>
+                                    </a>
+                                    <ul>
+                                        <li>
+                                            <a href="#">
+                                                <img src="./assets/images/icons/fr.png" alt="French">
+                                                <span>French</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!-- currency-menu -->
+                                <div class="currency">
+                                    <a href="#">$ USD<i class="ion-ios-arrow-down"></i></a>
+                                    <ul>
+                                        <li><a href="#">€ EUR</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Top bar area end -->
+    <!-- Header middle area start -->
+    <div class="header-middle-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-2 col-md-12">
+                    <!-- site-logo -->
+                    <div class="site-logo" style="text-align: center;">
+                        <a [routerLink]="['/']"><img  src="http://64.20.61.114/MASAB2B/Images/Logos/logo-white-ol.png" alt="Nikado"></a>
+                    </div>
+                </div>
+                <div class="col-xl-1 col-md-12 hidden-sm">
+                </div>
+                <div class="col-xl-6 col-md-12">
+                    <!-- header-search -->
+                    <!-- <div class="header-search clearfix">
+                        <div class="category-select pull-right" hidden>
+              
+                        </div> 
+                        <div class="header-search-form">
+                            <ngx-autocomplete [searchKeyword]="'name'" [inputId]="'searchEmployee'" 
+                            [placeholderValue]="'Search by Brands, Categories, Products'" name="searchbar" [(ngModel)]="searchbar" [entries]="this.productlist" ngDefaultControl (selectedValue)="selectEvent($event)"  >
+                          </ngx-autocomplete>
+                          
+                  
+                          <input type="submit" name="submit" value="Search" style="margin: 8px;border-radius: 5px!important;z-index: 10000;"  (click)="Searchbytext()" >
+                                
+                        </div>
+                    </div> -->
+                
+                
+                        <!-- header-search -->
+                        <div class="header-search clearfix">
+                            <!-- <div class="category-select pull-right">
+                                <select class="nice-select-menu">
+                                    <option data-display="All Categories">All Categories</option>
+                                    <option value="1">Decor & Furniture</option>
+                                    <option value="2">Electronics</option>
+                                    <option value="3">Fashion & clothings</option>
+                                    <option value="4" disabled>Sport & Outdoors</option>
+                                    <option value="5">Toy, Kids & Baby</option>
+                                </select> 
+                            </div>  -->
+                            <div class="header-search-form">
+                                <form action="#">
+                                    <ngx-autocomplete style="margin: 0px 0px!important" [searchKeyword]="'name'" [inputId]="'searchEmployee'" 
+                                    [placeholderValue]="'Search Products... '"  [image]="'http://64.20.61.114/MASAB2B/Images/Logos/logo-white-ol.png'" name="searchbar" [(ngModel)]="searchbar" [entries]="this.productlist" ngDefaultControl (selectedValue)="selectEvent($event)"  >
+                                  </ngx-autocomplete>
+                                    <input type="submit" name="submit" value="Search" style="z-index: 10000;"  (click)="Searchbytext()">
+                                </form>                                    
+                            </div>
+                        </div>
+                   
+                </div>
+                <div class="col-xl-3 col-md-12">
+                    <!-- shop-cart-menu -->
+                    <div class="shop-cart-menu pull-right">
+                        <ul>
+                            <!-- <li><a href="#"><i class="ion-ios-shuffle-strong"></i></a></li>
+                            <li><a href="wishlist.html"><i class="ion-android-favorite-outline"></i></a></li> -->
+                            <li>
+                                <a href="#">
+                                    <div class="cartflex">
+                                    <span class="cart-icon">
+                                        <i class="ion-bag" alt="cart"></i><sup>{{cartlist.length}}</sup>
+                                    </span>
+                                    <span class="cart-text">
+                                        <!-- <span class="cart-text-title">My cart <br>  --><strong>{{this.subtotal}} $</strong> <!--</span>-->
+                                    </span>
+                                </div>
+                                </a>
+                                <!-- <a href="#">
+                                <span class="cart-icon">
+                                    <i class="ion-bag"></i><sup>{{cartlist.length}}</sup>
+                                </span>
+                                <span class="cart-text">
+                                    <span class="cart-text-title"  >My cart <br> <strong ><span >{{this.subtotal}} $</span></strong> </span>
+                                </span>
+                            </a> -->
+                                <ul>
+                                    <li  *ngFor="let dataItem of cartlist  ">
+                                        <!-- single-shop-cart-wrapper -->
+                                        <div class="single-shop-cart-wrapper">
+                                            <div class="shop-cart-img">
+                                                <img src="{{imageurl}}{{dataItem.singleimage }}" alt="">
+                                            </div>
+                                            <div class="shop-cart-info">
+                                                <h5><a  >{{dataItem.name}}</a></h5>
+                                                <span class="price">{{dataItem.price}} $</span>
+                                                <span class="quantaty">Qty: {{dataItem.qtyordered}}</span>
+                                                <span class="cart-remove" (click)="removefromcart(dataItem.Product_ID)"><i class="fa fa-times"></i></span>
+                                            </div>
+                                        </div>
+                                    </li>
+                          
+                                    <li>
+                                        <!-- shop-cart-total -->
+                                        <div class="shop-cart-total">
+                                            <p>Subtotal: <span class="pull-right" >{{this.subtotal}} $</span></p>
+                                        </div>
+                                    </li>
+                             
+                                    <li>
+                                        <div class="shop-cart-btn">
+                                            <a href="" [routerLink]="['/checkout']">Checkout</a>
+                                            <a href="" [routerLink]="['/cart']" class="pull-right">View Cart</a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Header middle area end -->
+    <!-- Header bottom area start -->
+    <div class="header-bottom-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-3 col-lg-3 hidden-md hidden-sm pull-left category-wrapper">
+                    <div class="categori-menu">
+                   
+                    <span class="categorie-title">     <img style="width: 22px;
+                        margin-bottom:4px;margin-left:14px;margin-right: 10px;" src="./assets/images/icons/hamburgericon.png" alt="menu-icon">Categories</span>
+                    <nav>
+                        <ul class="categori-menu-list menu-hidden" *ngIf="!this.currentRoute"  >
+                
+                     
+                            <li *ngFor="let dataItem of categoryList  "><a [routerLink]="['/products', dataItem.name]"> 
+                                
+<<<<<<< HEAD
+                                <span *ngIf="dataItem.name == 'Televisions'" ><img src="./assets/images/icons/Icons_30X30_TV.svg" alt="menu-icon"></span>
+                                <span *ngIf="dataItem.name == 'Air Conditioners'" ><img src="./assets/images/icons/Icons_30X30_AC.svg" alt="menu-icon"></span>
+                                <span *ngIf="dataItem.name == 'Kitchen Appliances'" ><img src="./assets/images/icons/Icons_30X30_Kitchen-Appliances.svg" alt="menu-icon"></span>
+                                <span *ngIf="dataItem.name == 'Liquid Machines'" ><img src="./assets/images/icons/Icons_30X30_Liquid-Machine.svg" alt="menu-icon"></span>
+                                <span *ngIf="dataItem.name == 'Home Appliances'" ><img src="./assets/images/icons/Icons_30X30_Home-Appliances.svg" alt="menu-icon"></span>
+                                <span *ngIf="dataItem.name == 'Refrigerators'" ><img src="./assets/images/icons/Icons_30X30_Refrigetors.svg" alt="menu-icon"></span>
+                                <span *ngIf="dataItem.name == 'Washing Machines'" ><img src="./assets/images/icons/Icons_30X30_Washing-Machine.svg" alt="menu-icon"></span>
+                                <span *ngIf="dataItem.name == 'Dishwashers' || dataItem.name == 'DISHWASHERS'" ><img src="./assets/images/icons/Icons_30X30_Dish-Washer.svg" alt="menu-icon"></span>
+                                <span *ngIf="dataItem.name == 'WATER DISPENSORS'" ><img src="./assets/images/icons/Icons_30X30_Washer-Dispenser.svg" alt="menu-icon"></span>
+                                <span *ngIf="dataItem.name == 'HEATERS'" ><img src="./assets/images/icons/Icons_30X30_Heater.svg" alt="menu-icon"></span>
+                                <span *ngIf="dataItem.name == 'Gas Boilers'" ><img src="./assets/images/icons/Icons_30X30_Gas-boiler.svg" alt="menu-icon"></span>
+                                <span *ngIf="dataItem.name == 'Audio'" ><img src="./assets/images/icons/Icons_30X30_Audio.svg" alt="menu-icon"></span>
+                                <span *ngIf="dataItem.name == 'Groomings'" ><img src="./assets/images/icons/grooming.svg" alt="menu-icon"></span>
+=======
+                                <span *ngIf="dataItem.name == 'TELEVISIONS'" ><img src="./assets/images/icons/Icons_30X30_TV.svg" alt="menu-icon"></span>
+                                <span *ngIf="dataItem.name == 'AIR CONDITIONERS'" ><img src="./assets/images/icons/Icons_30X30_AC.svg" alt="menu-icon"></span>
+                                <span *ngIf="dataItem.name == 'KITCHEN APPLIANCES'" ><img src="./assets/images/icons/Icons_30X30_Kitchen-Appliances.svg" alt="menu-icon"></span>
+                                <span *ngIf="dataItem.name == 'LIQUID MACHINES'" ><img src="./assets/images/icons/Icons_30X30_Liquid-Machine.svg" alt="menu-icon"></span>
+                                <span *ngIf="dataItem.name == 'HOME APPLIANCES'" ><img src="./assets/images/icons/Icons_30X30_Home-Appliances.svg" alt="menu-icon"></span>
+                                <span *ngIf="dataItem.name == 'REFRIGERATORS'" ><img src="./assets/images/icons/Icons_30X30_Refrigetors.svg" alt="menu-icon"></span>
+                                <span *ngIf="dataItem.name == 'WASHING MACHINES'" ><img src="./assets/images/icons/Icons_30X30_Washing-Machine.svg" alt="menu-icon"></span>
+                                <span *ngIf="dataItem.name == 'DISH WASHERS' || dataItem.name == 'DISHWASHERS'" ><img src="./assets/images/icons/Icons_30X30_Dish-Washer.svg" alt="menu-icon"></span>
+                                <span *ngIf="dataItem.name == 'WATER DISPENSORS'" ><img src="./assets/images/icons/Icons_30X30_Washer-Dispenser.svg" alt="menu-icon"></span>
+                                <span *ngIf="dataItem.name == 'HEATERS'" ><img src="./assets/images/icons/Icons_30X30_Heater.svg" alt="menu-icon"></span>
+                                <span *ngIf="dataItem.name == 'GAS BOILERS'" ><img src="./assets/images/icons/Icons_30X30_Gas-boiler.svg" alt="menu-icon"></span>
+                                <span *ngIf="dataItem.name == 'AUDIO'" ><img src="./assets/images/icons/Icons_30X30_Audio.svg" alt="menu-icon"></span>
+                                <span *ngIf="dataItem.name == 'GROOMINGS'" ><img src="./assets/images/icons/grooming.svg" alt="menu-icon"></span>
+>>>>>>> ed7d4e9eade1c34b7d004d7cc37cb28b81ededb7
+                                {{dataItem.name}}
+
+
+                            </a>
+                            </li>
+                      
+                        </ul>
+                        <ul class="categori-menu-list menu-hidden" *ngIf="this.currentRoute" style="display:none ;"  >
+                
+                     
+<<<<<<< HEAD
+                            <li *ngFor="let dataItem of categoryList  "><a [routerLink]="['/products', dataItem.name]"> 
+
+                                <span *ngIf="dataItem.name == 'Televisions'" ><img src="./assets/images/icons/Icons_30X30_TV.svg" alt="menu-icon"></span>
+                                <span *ngIf="dataItem.name == 'Air Conditioners'" ><img src="./assets/images/icons/Icons_30X30_AC.svg" alt="menu-icon"></span>
+                                <span *ngIf="dataItem.name == 'Kitchen Appliances'" ><img src="./assets/images/icons/Icons_30X30_Kitchen-Appliances.svg" alt="menu-icon"></span>
+                                <span *ngIf="dataItem.name == 'Liquid Machines'" ><img src="./assets/images/icons/Icons_30X30_Liquid-Machine.svg" alt="menu-icon"></span>
+                                <span *ngIf="dataItem.name == 'Home Appliances'" ><img src="./assets/images/icons/Icons_30X30_Home-Appliances.svg" alt="menu-icon"></span>
+                                <span *ngIf="dataItem.name == 'Refrigerators'" ><img src="./assets/images/icons/Icons_30X30_Refrigetors.svg" alt="menu-icon"></span>
+                                <span *ngIf="dataItem.name == 'Washing Machines'" ><img src="./assets/images/icons/Icons_30X30_Washing-Machine.svg" alt="menu-icon"></span>
+                                <span *ngIf="dataItem.name == 'Dishwashers' || dataItem.name == 'DISHWASHERS'" ><img src="./assets/images/icons/Icons_30X30_Dish-Washer.svg" alt="menu-icon"></span>
+                                <span *ngIf="dataItem.name == 'WATER DISPENSORS'" ><img src="./assets/images/icons/Icons_30X30_Washer-Dispenser.svg" alt="menu-icon"></span>
+                                <span *ngIf="dataItem.name == 'HEATERS'" ><img src="./assets/images/icons/Icons_30X30_Heater.svg" alt="menu-icon"></span>
+                                <span *ngIf="dataItem.name == 'Gas Boilers'" ><img src="./assets/images/icons/Icons_30X30_Gas-boiler.svg" alt="menu-icon"></span>
+                                <span *ngIf="dataItem.name == 'Audio'" ><img src="./assets/images/icons/Icons_30X30_Audio.svg" alt="menu-icon"></span>
+                                <span *ngIf="dataItem.name == 'Groomings'" ><img src="./assets/images/icons/grooming.svg" alt="menu-icon"></span>
+                                {{dataItem.name}}
+
+                            </a>
+=======
+                            <li *ngFor="let dataItem of categoryList  "><a [routerLink]="['/products', dataItem.name]"> {{dataItem.name}}</a>
+>>>>>>> ed7d4e9eade1c34b7d004d7cc37cb28b81ededb7
+                            </li>
+                      
+                        </ul>
+                    </nav>
+                </div>
+                </div>
+                <div class="col-lg-9">
+                    <!-- main-menu -->
+                    <div class="main-menu">
+                        <nav>
+                            <ul >
+                                <li class="current "><a [routerLink]="['/']" >Home </a>
+                                   
+                                </li>
+                                <li><a class="nav-link" [routerLink]="['/products', '']" >Products</a></li>
+                                <li><a [routerLink]="['/blogs']">Blogs</a></li>
+                                <li><a [routerLink]="['/about-us']">About Us</a></li>
+                                <li><a [routerLink]="['/contact']">Contact</a></li>
+                                <!-- <li><a href="#">Brands <i class="fa fa-angle-down"></i></a>
+                                    <ul class="megamenu-3-column">
+                                        <li><a href="#">Pages</a>
+                                            <ul>
+                                                <li><a href="about-us.html">About Us</a></li>
+                                                <li><a href="contact-us.html">Contact Us</a></li>
+                                                <li><a href="service.html">Services</a></li>
+                                                <li><a href="portfolio.html">Portfolio</a></li>
+                                                <li><a href="faq.html">Frequently Questins</a></li>
+                                                <li><a href="404.html">Error 404</a></li>
+                                            </ul>
+                                        </li>
+                                        
+                                        
+                                    </ul>
+                                </li> -->
+                     
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="mobile-menu-area">
+                        <div class="mobile-menu">
+                            <nav id="mobile-menu-active" style="display: block;">
+                                <ul class="menu-overflow">
+                             
+                                    <li class="current "><a [routerLink]="['/']" >Home </a>
+                                   
+                                    </li>
+                                    <li><a class="nav-link" [routerLink]="['/products', '']" >Products</a></li>
+                                    <li><a [routerLink]="['/blogs']">Blogs</a></li>
+                                    <li><a [routerLink]="['/about-us']">About Us</a></li>
+                                    <li><a [routerLink]="['/contact']">Contact</a></li>
+                                </ul>
+                            </nav>                          
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Header bottom area end -->
+</header>

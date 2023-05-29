@@ -1,0 +1,1505 @@
+<div class="breadcrumbs-container">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <nav class="woocommerce-breadcrumb">
+                    <a href="/">Home</a>
+                    <span class="separator">/</span>
+                    <a [routerLink]="['/products', '']">Shop</a>
+                    <span class="separator">/</span>
+                    <a [routerLink]="['/products', this.categoryname]" >{{this.categoryname}}</a>
+                    <span class="separator">/</span> {{this.title}}
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>
+<style>
+    .categori-menu-list{
+
+        display:none;
+    }
+</style>
+<div class="entry-header">
+    <div class="container">
+        <div class="row">
+            <!-- <div class="img_producto_container" data-scale="1.6">
+                <a
+                  class="dslc-lightbox-image img_producto"
+                  href="http://henielab.com/wp-content/uploads/2019/09/Anteal-Producto-Henie-Lab-Honduras-1024x683.png"
+                  target="_self"
+                  style="background-image:url('http://henielab.com/wp-content/uploads/2019/09/Anteal-Producto-Henie-Lab-Honduras-1024x683.png')"
+                >
+                </a>
+              </div> -->
+        </div>
+    </div>
+</div>
+
+
+
+  
+
+<div class="single-product-area">
+    <div class="container">
+        <div class="single-product-wrapper">
+            <div class="row">
+                <div class="col-xs-12 col-md-7 col-lg-7">
+                    
+                     <div class="product-details-img-content">
+                         <div class="product-details-tab mr-40">
+                             <div class="product-details-large tab-content">
+                                <owl-carousel-o [options]="customOptions">
+<<<<<<< HEAD
+                                    <!-- <ng-template carouselSlide  >
+                                        <div class="slide">
+                                           <div class="sketchfab-embed-wrapper" style="height: 500px!important"> <iframe width="100%" height="92%"  title="NEW" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/b978a59ef06242759985840337ead0c6/embed"> </iframe> <p style="font-size: 13px; font-weight: normal; margin: 5px; color: #4A4A4A;"> <a href="https://sketchfab.com/3d-models/new-b978a59ef06242759985840337ead0c6?utm_medium=embed&utm_campaign=share-popup&utm_content=b978a59ef06242759985840337ead0c6" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;"> NEW </a> by <a href="https://sketchfab.com/ispywithmyeye007?utm_medium=embed&utm_campaign=share-popup&utm_content=b978a59ef06242759985840337ead0c6" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;"> ispywithmyeye007 </a> on <a href="https://sketchfab.com?utm_medium=embed&utm_campaign=share-popup&utm_content=b978a59ef06242759985840337ead0c6" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;">Sketchfab</a></p></div>
+                                        
+                                        </div>
+                                    </ng-template> -->
+=======
+
+>>>>>>> ed7d4e9eade1c34b7d004d7cc37cb28b81ededb7
+                                    <ng-container *ngFor="let slide of imageUrl2 let i = index">
+                                      <ng-template carouselSlide id="{{i}}">
+                                        <div  [ngClass]="{'tab-pane active' : i == 0, 'tab-pane' : i >0}" id="details{{i}}">
+                                            <div class="product-popup  " >
+                                                <a   >
+                                                    <div class="zoom-box">
+
+                                                    <!-- <img src="https://localhost:7234/{{slide}}"  alt="{{slide}}" title="{{slide}}"> -->
+                                                                            <lib-ngx-image-zoom
+    thumbImage="{{imageurl}}{{slide}}"
+  
+    [magnification]="1.5"
+    [enableScrollZoom]="true"
+    [circularLens]="true"
+    [enableLens]="true"
+    [lensWidth]="200"
+    [lensHeight]="200"
+></lib-ngx-image-zoom> 
+                                                    </div>
+                                                </a>
+                              
+                                            </div>
+                                            
+                                        </div>
+                                    
+                                      </ng-template> 
+                                    </ng-container>
+                                
+                                  </owl-carousel-o>
+                     
+                             
+                             </div>
+                             <div class="product-details-small nav product-dec-slider owl-carousel slick-initialized slick-slider slick-dotted slick-vertical ">
+                                <!-- <i class="fa fa-chevron-up slick-arrow" style="display: inline-block;"></i> -->
+                                <div class=" draggable slicklistdraggablecustom" style="height: 488px;"><div class="slick-track" style="opacity: 1; height: 2928px; transform: translate3d(0px, -488px, 0px);">
+                          
+                                    <owl-carousel-o [options]="customOptions1" *ngFor="let slide of imageUrl2 let i = index">
+
+                                        <ng-container  style="overflow: hidden;">
+                                          <ng-template carouselSlide id="{{i}}" >
+                                            <div  *ngFor='let preview of imageUrl2  let i = index' class="  " data-slick-index="-4" aria-hidden="true"  tabindex="-1"><div style="width:
+                                            80px">
+                                                <a  href="#details{{i}}"  tabindex="-1">
+                                                    
+                                                    <img src="{{imageurl}}{{preview}}"  alt="{{preview}}" title="{{preview}}" style="width: 200px;padding: 10px;margin-top:50%" >
+                                            </a>
+                                      
+                                        
+                                        
+                                        </div></div>
+                                          </ng-template> 
+                                        </ng-container>
+                                    
+                                      </owl-carousel-o>
+                          
+                                </div></div>
+                                <!-- <i class="fa fa-chevron-down slick-arrow" style="display: inline-block;"></i> -->
+                                <!-- <ul class="slick-dots" style="display: block;" role="tablist">
+                                    <li class="slick-active" role="presentation">
+                                        <button type="button" role="tab" id="slick-slide-control00" aria-controls="slick-slide00" aria-label="1 of 3" tabindex="0" aria-selected="true">1</button></li>
+                                    <li role="presentation"><button type="button" role="tab" id="slick-slide-control01" aria-controls="slick-slide04" aria-label="2 of 3" tabindex="-1">2</button></li><li role="presentation"><button type="button" role="tab" id="slick-slide-control02" aria-controls="slick-slide08" aria-label="3 of 3" tabindex="-1">3</button></li></ul> -->
+                                </div>
+                         </div>
+                     </div>
+
+                     <!-- <div class="product-details-img-content">
+                        <div class="product-details-tab mr-40">
+                            <div class="product-details-large tab-content">
+                                <div *ngFor='let preview of imageUrl2  let i = index' [ngClass]="{'tab-pane active' : i == 0, 'tab-pane' : i >0}" id="deatils{{i}}" ngModel="deatils{{i}}">
+                                    <div class="product-popup">
+                                        <a href="https://localhost:7234/{{preview}}">
+                                            <img src="https://localhost:7234/{{preview}}"alt="">
+                                        </a>
+                                    </div>
+                                </div>
+                       
+                            </div>
+                            <div class="product-details-small nav product-dec-slider owl-carousel slick-initialized slick-slider slick-dotted slick-vertical"><i class="fa fa-chevron-up slick-arrow" style="display: inline-block;"></i>
+                                <div class="slick-list draggable" style="height: 488px;">
+                                <div class="slick-track" style="opacity: 1; height: 2928px; transform: translate3d(0px, -488px, 0px);">
+                                <div  *ngFor='let preview of imageUrl2  let i = index' class="slick-slide slick-cloned" data-slick-index="-4" aria-hidden="true" style="width: 150px;" tabindex="-1"><div>
+                                    <a  href="#pro-details2" style="width: 100%; display: inline-block;" tabindex="-1">
+                                    <img src="https://localhost:7234/{{preview}}" alt="">
+                                </a></div></div>
+                            
+                            </div></div><i class="fa fa-chevron-down slick-arrow" style="display: inline-block;"></i><ul class="slick-dots" style="display: block;" role="tablist"><li class="slick-active" role="presentation"><button type="button" role="tab" id="slick-slide-control00" aria-controls="slick-slide00" aria-label="1 of 3" tabindex="0" aria-selected="true">1</button></li><li role="presentation" class=""><button type="button" role="tab" id="slick-slide-control01" aria-controls="slick-slide04" aria-label="2 of 3" tabindex="-1">2</button></li><li role="presentation" class=""><button type="button" role="tab" id="slick-slide-control02" aria-controls="slick-slide08" aria-label="3 of 3" tabindex="-1">3</button></li></ul></div>
+                        </div>
+                    </div> -->
+
+                </div>
+                <div class="col-xs-12 col-md-5 col-lg-5">
+                    <div class="single-product-info">
+                        <h1>{{this.title}}</h1>
+                        <!-- <p>Model: {{this.modelno}} | Brand: {{this.brandname}} | Category:  {{this.categoryname}}</p> -->
+                        <!-- <p>{{this.brandname}}</p>
+                        <p> {{this.categoryname}}</p> -->
+                       
+                      
+                        <!-- <div class="product-rattings" hidden>
+                             <span><i class="fa fa-star"></i></span>
+                             <span><i class="fa fa-star"></i></span>
+                             <span><i class="fa fa-star"></i></span>
+                             <span><i class="fa fa-star-half-o"></i></span>
+                             <span><i class="fa fa-star-o"></i></span>
+                         </div> -->
+                         <div class="product-price-choices">
+                            <div class="price-ranges">
+                                <div class="first-range" *ngFor="let user of this.pricevalue ">
+                                    <div class="first-quantity"> {{user.qty}}</div>
+                                    <span class="price">
+                                        {{user.price}}<small>$</small>
+                                    </span>
+                                </div>
+                       
+                            </div>
+
+
+                        </div>
+                       
+                         <p class="product-small-desc"  [innerHTML]="this.shortdesc"></p>
+                         <div class="product-variations"  *ngFor="let dataItem of   variationkey  ">
+                            <div class="variation-name">{{dataItem}}:</div>
+<<<<<<< HEAD
+                            <ul class="variation-items"  *ngFor="let user of variationarry ;let i=index">
+                                <li *ngFor="let userss of user " class="{{(this.variationselectvalue !== '' && this.variationselectvalue == userss.value) || (this.variationselectvalue == '' &&   this.variationpreselected == userss.value ) ? 'active' : ''}}"><span *ngIf="dataItem ==userss.key"> <a (click)="veriationchange(modelno,userss.value)" >{{userss.value}}</a></span></li>
+=======
+                            <ul class="variation-items"  *ngFor="let user of variationarry">
+                                <li *ngFor="let userss of user" class="active"><span *ngIf="dataItem ==userss.key"> <a (click)="veriationchange(modelno,userss.value)" >{{userss.value}}</a></span></li>
+>>>>>>> ed7d4e9eade1c34b7d004d7cc37cb28b81ededb7
+                                
+                            </ul>
+                        </div>
+                        <div class="product-details-choices">
+                            <div class="box-quantity d-flex">
+                                <form action="#">
+<<<<<<< HEAD
+                                    <input class="quantity mr-40" value="{{this.moq}}" min="{{this.moq}}"  type="number" name="qtyselected" [(ngModel)]="qtyselected">
+=======
+                                    <input class="quantity mr-40" [min]="this.moq" value="100" type="number" name="qtyselected" [(ngModel)]="qtyselected">
+>>>>>>> ed7d4e9eade1c34b7d004d7cc37cb28b81ededb7
+                                </form>
+                                <a class="add-cart" (click)="SavetoCart(this.productID,this.qtyselected,this.pricevalue,this.cbm)">add to cart</a>
+                            </div>
+
+                        </div>
+                        <small class="moq-product-details">(Min Quantity Should Be Greater Than OR Equal To :
+                            <strong>100</strong> )</small>
+                            <div class="product_meta">
+                                <span class="posted_in">Category: <a href="#" rel="tag">{{this.categoryname}}</a></span>
+                            </div>
+                            <div class="single-product-sharing">
+
+                             
+                                <div class="widget widget_socialsharing_widget">
+                                    <h3 class="widget-title">Share this product</h3>
+                                    <ul class="social-icons">
+                                        <li><a class="facebook social-icon" href="#"><i class="fa fa-facebook"></i></a></li>
+                                        <li><a class="twitter social-icon" href="#"><i class="fa fa-twitter"></i></a></li>
+                                        <li><a class="pinterest social-icon" href="#"><i class="fa fa-pinterest"></i></a></li>
+                                        <li><a class="gplus social-icon" href="#"><i class="fa fa-google-plus"></i></a></li>
+                                        <li><a class="linkedin social-icon" href="#"><i class="fa fa-linkedin"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                         <!-- <div class="box-quantity d-flex">                 
+
+
+                    <div class="wishlist-compear-area">
+            
+ 
+    <table class="table-price" style="width:100%"  *ngFor="let dataItem of   variationkey  " style="display: inline-flex;">
+    <th  style="margin-top:10px;padding-right: 16px;padding: 1px!important;">{{dataItem}}: </th>
+    <tr *ngFor="let user of variationarry">
+     <td *ngFor="let userss of user">    <span *ngIf="dataItem ==userss.key">    <a class="variationtext" (click)="veriationchange(modelno,userss.value)"  >{{userss.value}}</a></span></td>
+
+    </tr>
+  
+  </table>
+  <table style="width:60%; border: 1px solid black;">
+    <tr *ngFor="let user of this.attributevalue " style="width:60%; border: 1px solid black;">
+      <th style="width:60%; border: 1px solid black;">{{user.attributekey}}</th>
+      <td>{{user.attributevalue}}</td>
+    </tr>
+  
+  </table>
+  <p><span >CBM:</span> {{this.cbm}}</p>
+  <div class="box-quantity d-flex">
+<span style="margin:10px;    margin-left: 0px!important;">Quantity:</span>    <form action="#">
+  <input class="quantity mr-40"  [min]="this.moq" value="100" type="number"  style="width:80px ;" name="qtyselected"  [(ngModel)]="qtyselected"> <span>(Min Quantity Should Be Greater Than OR Equal To : <span style="color:red">{{this.moq}}</span> )</span>
+  </form>
+  <br>
+
+</div>
+<a class="add-cart" (click)="SavetoCart(this.productID,this.qtyselected,this.pricevalue,this.cbm)" style="width:190px ;float:right;cursor: pointer;">add to cart</a>
+                         </div> 
+    
+                    </div> -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="product-description-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <ul class="nav nav-tabs">
+                    <li class="active navtabdes ">
+                        <a data-toggle="tab" href="#description" class="active">Details</a>
+                    </li>
+                    <li class="navtabdes">
+                        <a data-toggle="tab" href="#reviews">Specification  </a>
+                    </li>
+                    <li class="navtabdes" hidden>
+                        <a data-toggle="tab" href="#reviews1">Specification 1  </a>
+                    </li>
+                    <!-- <li class="navtabdes">
+                        <a data-toggle="tab" href="#reviews2">Specification 2  </a>
+                    </li> -->
+                </ul>
+                <div class="tab-content">
+                    <div id="description" class="tab-pane fade in show active">
+             
+                        <span  style="font-size: 13px" [innerHTML]="this.longdesc "></span>
+                    </div>
+                    <div id="reviews" class="tab-pane fade product-review-area">
+                        <!-- <div style="margin-bottom:2% ;text-align: center;"> <button class="btn btn-primary" (click)="captureScreen(this.title)">Export To PDF</button></div> -->
+                        <div class="download-spec">
+                            <a (click)="captureScreen(this.title)"><i class="ion-ios-download-outline"></i>
+                                Download Specifications</a>
+                        </div>
+                        <div class="container-fluid">
+                    
+                            <div class="row" id="contentToConvert" #pdfTable>
+                                <!-- <img  src="https://www.w3schools.com/bootstrap/cinqueterre.jpg" class="rounded"> -->
+                                <div class="col-xs-6 col-md-6"><span  style="font-size: 13px" [innerHTML]="this.spec "></span></div>
+                                <div class="col-xs-6 col-md-6"><span  style="font-size: 13px" [innerHTML]="this.specificationright "></span></div>
+                            </div>
+                        </div>
+                   
+            
+                      
+                        
+                 
+                    </div>
+                    <div id="reviews1" class="tab-pane fade product-review-area">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-xs-12 col-md-12">
+                                    <section>
+
+
+                                        <div class="specification-header">
+                                            <h2>Basic Information</h2>
+                                        </div>
+                                
+                                        <dl class="specification-details">
+                                            <div>
+                                                <dd>MASA Model Name</dd>
+                                                <dd>98EV600QA</dd>
+                                            </div>
+                                            <div>
+                                                <dd>MASA Brand Name</dd>
+                                                <dd>evvoli</dd>
+                                            </div>
+                                            <div>
+                                                <dd>Manufacture</dd>
+                                                <dd>TCL</dd>
+                                            </div>
+                                            <div>
+                                                <dd>Manufacture Model Name</dd>
+                                                <dd>98D8100</dd>
+                                            </div>
+                                            <div>
+                                                <dd>Series</dd>
+                                                <dd></dd>
+                                            </div>
+                                            <div>
+                                                <dd>EAN</dd>
+                                                <dd></dd>
+                                            </div>
+                                            <div>
+                                                <dd>Chassis</dd>
+                                                <dd>1RT51MC1S2B</dd>
+                                            </div>
+                                        </dl>
+                                        <div class="specification-header">
+                                            <h2>Product Type</h2>
+                                        </div>
+                                
+                                        <dl class="specification-details">
+                                            <div>
+                                                <dd>Screen Type</dd>
+                                                <dd>LCD</dd>
+                                            </div>
+                                            <div>
+                                                <dd>Technology Type</dd>
+                                                <dd>MINI LED (DLED+Local dimming)</dd>
+                                            </div>
+                                            <div>
+                                                <dd>Color gammut</dd>
+                                                <dd></dd>
+                                            </div>
+                                            <div>
+                                                <dd>Panel Type</dd>
+                                                <dd>NTSC 85%,DCI-P3 92%</dd>
+                                            </div>
+                                        </dl>
+                                        <div class="specification-header">
+                                            <h2>General Inforamtion</h2>
+                                        </div>
+                                
+                                        <dl class="specification-details">
+                                            <div>
+                                                <dd>TV System(Tuner)</dd>
+                                                <dd>VA</dd>
+                                            </div>
+                                            <div>
+                                                <dd>CPU Core</dd>
+                                                <dd>DVB-T/T2、DVB-S/S2、CI+</dd>
+                                            </div>
+                                            <div>
+                                                <dd>GPU Core</dd>
+                                                <dd>CA55* 4 @ 1.3Ghz</dd>
+                                            </div>
+                                            <div>
+                                                <dd>Operation System</dd>
+                                                <dd>Mali G31 MP2,Open GL ES3.2</dd>
+                                            </div>
+                                            <div>
+                                                <dd>Memory</dd>
+                                                <dd>androidtv - Android Version R</dd>
+                                            </div>
+                                            <div>
+                                                <dd>Flash</dd>
+                                                <dd>2GB</dd>
+                                            </div>
+                                            <div>
+                                                <dd>Google TV-Android Version</dd>
+                                                <dd>16GB</dd>
+                                            </div>
+                                            <div>
+                                                <dd>Google Assistant Built-in</dd>
+                                                <dd>androidtv - Android Version R</dd>
+                                            </div>
+                                            <div>
+                                                <dd>Works with Alexa</dd>
+                                                <dd>Yes</dd>
+                                            </div>
+                                            <div>
+                                                <dd>IMAX (DTS)</dd>
+                                                <dd>No</dd>
+                                            </div>
+                                        </dl>
+                                        <div class="specification-header">
+                                            <h2>Audio</h2>
+                                        </div>
+                                
+                                        <dl class="specification-details">
+                                            <div>
+                                                <dd>Audio Power</dd>
+                                                <dd>15W*2(main)+15W*2(subwoofer) speaker size:2*(1300+500)=3600cc</dd>
+                                            </div>
+                                            <div>
+                                                <dd>Dolby</dd>
+                                                <dd> MS12 config Z, Dolby Atmos</dd>
+                                            </div>
+                                            <div>
+                                                <dd>DTS</dd>
+                                                <dd>No</dd>
+                                            </div>
+                                            <div>
+                                                <dd>Sound channel</dd>
+                                                <dd>2.2 4 Channel</dd>
+                                            </div>
+                                            <div>
+                                                <dd>Speaker type</dd>
+                                                <dd>Dolby Atmos</dd>
+                                            </div>
+                                            <div>
+                                                <dd>Bluetooth Audio Only</dd>
+                                                <dd>Yes</dd>
+                                            </div>
+                                        </dl>
+                                        <div class="specification-header">
+                                            <h2>Display</h2>
+                                        </div>
+                                
+                                        <dl class="specification-details">
+                                            <div>
+                                                <dd>Resolution</dd>
+                                                <dd>4K UHD</dd>
+                                            </div>
+                                            <div>
+                                                <dd>Panel Resolution</dd>
+                                                <dd>3840*2160</dd>
+                                            </div>
+                                            <div>
+                                                <dd>Aspect Ratio</dd>
+                                                <dd>16:9</dd>
+                                            </div>
+                                            <div>
+                                                <dd>Refresh Rate</dd>
+                                                <dd>120Hz</dd>
+                                            </div>
+                                            <div>
+                                                <dd>Dolby Vision</dd>
+                                                <dd>Dolby Vision</dd>
+                                            </div>
+                                            <div>
+                                                <dd>HLG</dd>
+                                                <dd>YES</dd>
+                                            </div>
+                                            <div>
+                                                <dd>HDR 10+</dd>
+                                                <dd>HDR10</dd>
+                                            </div>
+                                            <div>
+                                                <dd>Contrast Ratio(Dynamic)</dd>
+                                                <dd>6000:1 (typ.)</dd>
+                                            </div>
+                                            <div>
+                                                <dd>Local Dimming</dd>
+                                                <dd>Yes, 192 zones</dd>
+                                            </div>
+                                            <div>
+                                                <dd>Brightness</dd>
+                                                <dd>400nit(Min)/450nit(Typ), 650nit(Peak)</dd>
+                                            </div>
+                                            <div>
+                                                <dd>TUV Eye Protection</dd>
+                                                <dd>No</dd>
+                                            </div>
+                                        </dl>
+                                        <div class="specification-header">
+                                            <h2>Connectivity</h2>
+                                        </div>
+                                
+                                        <dl class="specification-details">
+                                            <div>
+                                                <dd>BlueTooth</dd>
+                                                <dd>Yes</dd>
+                                            </div>
+                                            <div>
+                                                <dd>Wi-Fi</dd>
+                                                <dd>RTD8822/WIFI5, integrted 2*2 b/g/n/ac, 2.4G/5G</dd>
+                                            </div>
+                                            <div>
+                                                <dd>CI</dd>
+                                                <dd></dd>
+                                            </div>
+                                            <div>
+                                                <dd>RJ45</dd>
+                                                <dd></dd>
+                                            </div>
+                                            <div>
+                                                <dd>OPTICAL/COAXIAL</dd>
+                                                <dd></dd>
+                                            </div>
+                                            <div>
+                                                <dd>Earphone</dd>
+                                                <dd></dd>
+                                            </div>
+                                            <div>
+                                                <dd>Digital Audio Output(SPDIF)</dd>
+                                                <dd>1S--OPTICAL</dd>
+                                            </div>
+                                            <div>
+                                                <dd>RF Input</dd>
+                                                <dd>1S---IEC, 1S---F type</dd>
+                                            </div>
+                                            <div>
+                                                <dd>USB</dd>
+                                                <dd>USB2.0 (5V-0.5A)*1, USB3.0 (5V-0.9A)*1</dd>
+                                            </div>
+                                            <div>
+                                                <dd>HDMI</dd>
+                                                <dd>HDMI 2.1 *3 (4K2K 60Hz)</dd>
+                                            </div>
+                                            <div>
+                                                <dd>AC in </dd>
+                                                <dd></dd>
+                                            </div>
+                                            <div>
+                                                <dd>eARC</dd>
+                                                <dd>Yes</dd>
+                                            </div>
+                                            <div>
+                                                <dd>ALLM</dd>
+                                                <dd>Yes</dd>
+                                            </div>
+                                            <div>
+                                                <dd>VRR</dd>
+                                                <dd>Yes</dd>
+                                            </div>
+                                            <div>
+                                                <dd>Freesync</dd>
+                                                <dd>No</dd>
+                                            </div>
+                                            <div>
+                                                <dd>HDMI CEC</dd>
+                                                <dd>Yes, with cerfication</dd>
+                                            </div>
+                                        </dl>
+                                        <div class="specification-header">
+                                            <h2>Additional Feature</h2>
+                                        </div>
+                                
+                                        <dl class="specification-details">
+                                            <div>
+                                                <dd>PVR/Timeshift</dd>
+                                                <dd>Yes, Only for FTA</dd>
+                                            </div>
+                                            <div>
+                                                <dd>EPG</dd>
+                                                <dd>DVB EPG --Yes; IP EPG ---No</dd>
+                                            </div>
+                                            <div>
+                                                <dd>Subtitle</dd>
+                                                <dd>Yes(DTV)</dd>
+                                            </div>
+                                        </dl>
+                                        <div class="specification-header">
+                                            <h2>Dimensions</h2>
+                                        </div>
+                                
+                                        <dl class="specification-details">
+                                            <div>
+                                                <dd>Vesa Wall Mount Support</dd>
+                                                <dd>WMB533</dd>
+                                            </div>
+                                            <div>
+                                                <dd>Wall Mount Size(WXH)</dd>
+                                                <dd>600*400</dd>
+                                            </div>
+                                            <div>
+                                                <dd>Set Size with Stand (WxHxD)</dd>
+                                                <dd>2181.6*479.1*1358.4</dd>
+                                            </div>
+                                            <div>
+                                                <dd>Set Size without Stand (WxHxD)</dd>
+                                                <dd>2181.6*110.6*1257.5</dd>
+                                            </div>
+                                            <div>
+                                                <dd>Package Dimensions (WxHxD)</dd>
+                                                <dd>2376*273*1486</dd>
+                                            </div>
+                                        </dl>
+                                        <div class="specification-header">
+                                            <h2>Weight</h2>
+                                        </div>
+                                
+                                        <dl class="specification-details">
+                                            <div>
+                                                <dd>Net Weight Without Stand (Kg)</dd>
+                                                <dd>74</dd>
+                                            </div>
+                                            <div>
+                                                <dd>Net Weight With Stand (Kg)</dd>
+                                                <dd>70</dd>
+                                            </div>
+                                            <div>
+                                                <dd>Gross Weight With Packaging (Kg)</dd>
+                                                <dd>110</dd>
+                                            </div>
+                                        </dl>
+                                        <div class="specification-header">
+                                            <h2>Container Loading</h2>
+                                        </div>
+                                
+                                        <dl class="specification-details">
+                                            <div>
+                                                <dd>20GP</dd>
+                                                <dd>/</dd>
+                                            </div>
+                                            <div>
+                                                <dd>40GP</dd>
+                                                <dd>/</dd>
+                                            </div>
+                                            <div>
+                                                <dd>40HQ</dd>
+                                                <dd>40</dd>
+                                            </div>
+                                        </dl>
+                                        <div class="specification-header">
+                                            <h2>CBM</h2>
+                                        </div>
+                                
+                                        <dl class="specification-details">
+                                            <div>
+                                                <dd>CBM</dd>
+                                                <dd>0.963890928</dd>
+                                            </div>
+                                
+                                
+                                
+                                        </dl>
+                                    </section>
+
+
+                                </div>
+                                </div>
+                                </div>
+                                </div>
+                                <div id="reviews2" class="tab-pane fade product-review-area">
+                                    <div class="container-fluid">
+                                        <div class="row">
+                                      
+                                            <div class="col-xs-6 col-md-6">  <section>
+
+
+                                                <div class="specification-header">
+                                                    <h2>Basic Information</h2>
+                                                </div>
+                                        
+                                                <dl class="specification-details">
+                                                    <div>
+                                                        <dd>MASA Model Name</dd>
+                                                        <dd>98EV600QA</dd>
+                                                    </div>
+                                                    <div>
+                                                        <dd>MASA Brand Name</dd>
+                                                        <dd>evvoli</dd>
+                                                    </div>
+                                                    <div>
+                                                        <dd>Manufacture</dd>
+                                                        <dd>TCL</dd>
+                                                    </div>
+                                                    <div>
+                                                        <dd>Manufacture Model Name</dd>
+                                                        <dd>98D8100</dd>
+                                                    </div>
+                                                    <div>
+                                                        <dd>Series</dd>
+                                                        <dd></dd>
+                                                    </div>
+                                                    <div>
+                                                        <dd>EAN</dd>
+                                                        <dd></dd>
+                                                    </div>
+                                                    <div>
+                                                        <dd>Chassis</dd>
+                                                        <dd>1RT51MC1S2B</dd>
+                                                    </div>
+                                                </dl>
+                                                <div class="specification-header">
+                                                    <h2>Product Type</h2>
+                                                </div>
+                                        
+                                                <dl class="specification-details">
+                                                    <div>
+                                                        <dd>Screen Type</dd>
+                                                        <dd>LCD</dd>
+                                                    </div>
+                                                    <div>
+                                                        <dd>Technology Type</dd>
+                                                        <dd>MINI LED (DLED+Local dimming)</dd>
+                                                    </div>
+                                                    <div>
+                                                        <dd>Color gammut</dd>
+                                                        <dd></dd>
+                                                    </div>
+                                                    <div>
+                                                        <dd>Panel Type</dd>
+                                                        <dd>NTSC 85%,DCI-P3 92%</dd>
+                                                    </div>
+                                                </dl>
+                                                <div class="specification-header">
+                                                    <h2>General Inforamtion</h2>
+                                                </div>
+                                        
+                                                <dl class="specification-details">
+                                                    <div>
+                                                        <dd>TV System(Tuner)</dd>
+                                                        <dd>VA</dd>
+                                                    </div>
+                                                    <div>
+                                                        <dd>CPU Core</dd>
+                                                        <dd>DVB-T/T2、DVB-S/S2、CI+</dd>
+                                                    </div>
+                                                    <div>
+                                                        <dd>GPU Core</dd>
+                                                        <dd>CA55* 4 @ 1.3Ghz</dd>
+                                                    </div>
+                                                    <div>
+                                                        <dd>Operation System</dd>
+                                                        <dd>Mali G31 MP2,Open GL ES3.2</dd>
+                                                    </div>
+                                                    <div>
+                                                        <dd>Memory</dd>
+                                                        <dd>androidtv - Android Version R</dd>
+                                                    </div>
+                                                    <div>
+                                                        <dd>Flash</dd>
+                                                        <dd>2GB</dd>
+                                                    </div>
+                                                    <div>
+                                                        <dd>Google TV-Android Version</dd>
+                                                        <dd>16GB</dd>
+                                                    </div>
+                                                    <div>
+                                                        <dd>Google Assistant Built-in</dd>
+                                                        <dd>androidtv - Android Version R</dd>
+                                                    </div>
+                                                    <div>
+                                                        <dd>Works with Alexa</dd>
+                                                        <dd>Yes</dd>
+                                                    </div>
+                                                    <div>
+                                                        <dd>IMAX (DTS)</dd>
+                                                        <dd>No</dd>
+                                                    </div>
+                                                </dl>
+                                                <div class="specification-header">
+                                                    <h2>Audio</h2>
+                                                </div>
+                                        
+                                                <dl class="specification-details">
+                                                    <div>
+                                                        <dd>Audio Power</dd>
+                                                        <dd>15W*2(main)+15W*2(subwoofer) speaker size:2*(1300+500)=3600cc</dd>
+                                                    </div>
+                                                    <div>
+                                                        <dd>Dolby</dd>
+                                                        <dd> MS12 config Z, Dolby Atmos</dd>
+                                                    </div>
+                                                    <div>
+                                                        <dd>DTS</dd>
+                                                        <dd>No</dd>
+                                                    </div>
+                                                    <div>
+                                                        <dd>Sound channel</dd>
+                                                        <dd>2.2 4 Channel</dd>
+                                                    </div>
+                                                    <div>
+                                                        <dd>Speaker type</dd>
+                                                        <dd>Dolby Atmos</dd>
+                                                    </div>
+                                                    <div>
+                                                        <dd>Bluetooth Audio Only</dd>
+                                                        <dd>Yes</dd>
+                                                    </div>
+                                                </dl>
+                                                <div class="specification-header">
+                                                    <h2>Display</h2>
+                                                </div>
+                                        
+                                                <dl class="specification-details">
+                                                    <div>
+                                                        <dd>Resolution</dd>
+                                                        <dd>4K UHD</dd>
+                                                    </div>
+                                                    <div>
+                                                        <dd>Panel Resolution</dd>
+                                                        <dd>3840*2160</dd>
+                                                    </div>
+                                                    <div>
+                                                        <dd>Aspect Ratio</dd>
+                                                        <dd>16:9</dd>
+                                                    </div>
+                                                    <div>
+                                                        <dd>Refresh Rate</dd>
+                                                        <dd>120Hz</dd>
+                                                    </div>
+                                                    <div>
+                                                        <dd>Dolby Vision</dd>
+                                                        <dd>Dolby Vision</dd>
+                                                    </div>
+                                                    <div>
+                                                        <dd>HLG</dd>
+                                                        <dd>YES</dd>
+                                                    </div>
+                                                    <div>
+                                                        <dd>HDR 10+</dd>
+                                                        <dd>HDR10</dd>
+                                                    </div>
+                                                    <div>
+                                                        <dd>Contrast Ratio(Dynamic)</dd>
+                                                        <dd>6000:1 (typ.)</dd>
+                                                    </div>
+                                                    <div>
+                                                        <dd>Local Dimming</dd>
+                                                        <dd>Yes, 192 zones</dd>
+                                                    </div>
+                                                    <div>
+                                                        <dd>Brightness</dd>
+                                                        <dd>400nit(Min)/450nit(Typ), 650nit(Peak)</dd>
+                                                    </div>
+                                                    <div>
+                                                        <dd>TUV Eye Protection</dd>
+                                                        <dd>No</dd>
+                                                    </div>
+                                                </dl>
+                                                <div class="specification-header">
+                                                    <h2>Connectivity</h2>
+                                                </div>
+                                        
+                                                <dl class="specification-details">
+                                                    <div>
+                                                        <dd>BlueTooth</dd>
+                                                        <dd>Yes</dd>
+                                                    </div>
+                                                    <div>
+                                                        <dd>Wi-Fi</dd>
+                                                        <dd>RTD8822/WIFI5, integrted 2*2 b/g/n/ac, 2.4G/5G</dd>
+                                                    </div>
+                                                    <div>
+                                                        <dd>CI</dd>
+                                                        <dd></dd>
+                                                    </div>
+                                                    <div>
+                                                        <dd>RJ45</dd>
+                                                        <dd></dd>
+                                                    </div>
+                                                    <div>
+                                                        <dd>OPTICAL/COAXIAL</dd>
+                                                        <dd></dd>
+                                                    </div>
+                                                    <div>
+                                                        <dd>Earphone</dd>
+                                                        <dd></dd>
+                                                    </div>
+                                                    <div>
+                                                        <dd>Digital Audio Output(SPDIF)</dd>
+                                                        <dd>1S--OPTICAL</dd>
+                                                    </div>
+                                                    <div>
+                                                        <dd>RF Input</dd>
+                                                        <dd>1S---IEC, 1S---F type</dd>
+                                                    </div>
+                                                    <div>
+                                                        <dd>USB</dd>
+                                                        <dd>USB2.0 (5V-0.5A)*1, USB3.0 (5V-0.9A)*1</dd>
+                                                    </div>
+                                                    <div>
+                                                        <dd>HDMI</dd>
+                                                        <dd>HDMI 2.1 *3 (4K2K 60Hz)</dd>
+                                                    </div>
+                                                    <div>
+                                                        <dd>AC in </dd>
+                                                        <dd></dd>
+                                                    </div>
+                                                    <div>
+                                                        <dd>eARC</dd>
+                                                        <dd>Yes</dd>
+                                                    </div>
+                                                    <div>
+                                                        <dd>ALLM</dd>
+                                                        <dd>Yes</dd>
+                                                    </div>
+                                                    <div>
+                                                        <dd>VRR</dd>
+                                                        <dd>Yes</dd>
+                                                    </div>
+                                                    <div>
+                                                        <dd>Freesync</dd>
+                                                        <dd>No</dd>
+                                                    </div>
+                                                    <div>
+                                                        <dd>HDMI CEC</dd>
+                                                        <dd>Yes, with cerfication</dd>
+                                                    </div>
+                                                </dl>
+                                                <div class="specification-header">
+                                                    <h2>Additional Feature</h2>
+                                                </div>
+                                        
+                                                <dl class="specification-details">
+                                                    <div>
+                                                        <dd>PVR/Timeshift</dd>
+                                                        <dd>Yes, Only for FTA</dd>
+                                                    </div>
+                                                    <div>
+                                                        <dd>EPG</dd>
+                                                        <dd>DVB EPG --Yes; IP EPG ---No</dd>
+                                                    </div>
+                                                    <div>
+                                                        <dd>Subtitle</dd>
+                                                        <dd>Yes(DTV)</dd>
+                                                    </div>
+                                                </dl>
+                                                <div class="specification-header">
+                                                    <h2>Dimensions</h2>
+                                                </div>
+                                        
+                                                <dl class="specification-details">
+                                                    <div>
+                                                        <dd>Vesa Wall Mount Support</dd>
+                                                        <dd>WMB533</dd>
+                                                    </div>
+                                                    <div>
+                                                        <dd>Wall Mount Size(WXH)</dd>
+                                                        <dd>600*400</dd>
+                                                    </div>
+                                                    <div>
+                                                        <dd>Set Size with Stand (WxHxD)</dd>
+                                                        <dd>2181.6*479.1*1358.4</dd>
+                                                    </div>
+                                                    <div>
+                                                        <dd>Set Size without Stand (WxHxD)</dd>
+                                                        <dd>2181.6*110.6*1257.5</dd>
+                                                    </div>
+                                                    <div>
+                                                        <dd>Package Dimensions (WxHxD)</dd>
+                                                        <dd>2376*273*1486</dd>
+                                                    </div>
+                                                </dl>
+                                                <div class="specification-header">
+                                                    <h2>Weight</h2>
+                                                </div>
+                                        
+                                                <dl class="specification-details">
+                                                    <div>
+                                                        <dd>Net Weight Without Stand (Kg)</dd>
+                                                        <dd>74</dd>
+                                                    </div>
+                                                    <div>
+                                                        <dd>Net Weight With Stand (Kg)</dd>
+                                                        <dd>70</dd>
+                                                    </div>
+                                                    <div>
+                                                        <dd>Gross Weight With Packaging (Kg)</dd>
+                                                        <dd>110</dd>
+                                                    </div>
+                                                </dl>
+                                                <div class="specification-header">
+                                                    <h2>Container Loading</h2>
+                                                </div>
+                                        
+                                                <dl class="specification-details">
+                                                    <div>
+                                                        <dd>20GP</dd>
+                                                        <dd>/</dd>
+                                                    </div>
+                                                    <div>
+                                                        <dd>40GP</dd>
+                                                        <dd>/</dd>
+                                                    </div>
+                                                    <div>
+                                                        <dd>40HQ</dd>
+                                                        <dd>40</dd>
+                                                    </div>
+                                                </dl>
+                                                <div class="specification-header">
+                                                    <h2>CBM</h2>
+                                                </div>
+                                        
+                                                <dl class="specification-details">
+                                                    <div>
+                                                        <dd>CBM</dd>
+                                                        <dd>0.963890928</dd>
+                                                    </div>
+                                        
+                                        
+                                        
+                                                </dl>
+                                            </section></div>
+                                            <div class="col-xs-6 col-md-6">  <section>
+
+
+                                                <div class="specification-header">
+                                                    <h2>Basic Information</h2>
+                                                </div>
+                                        
+                                                <dl class="specification-details">
+                                                    <div>
+                                                        <dd>MASA Model Name</dd>
+                                                        <dd>98EV600QA</dd>
+                                                    </div>
+                                                    <div>
+                                                        <dd>MASA Brand Name</dd>
+                                                        <dd>evvoli</dd>
+                                                    </div>
+                                                    <div>
+                                                        <dd>Manufacture</dd>
+                                                        <dd>TCL</dd>
+                                                    </div>
+                                                    <div>
+                                                        <dd>Manufacture Model Name</dd>
+                                                        <dd>98D8100</dd>
+                                                    </div>
+                                                    <div>
+                                                        <dd>Series</dd>
+                                                        <dd></dd>
+                                                    </div>
+                                                    <div>
+                                                        <dd>EAN</dd>
+                                                        <dd></dd>
+                                                    </div>
+                                                    <div>
+                                                        <dd>Chassis</dd>
+                                                        <dd>1RT51MC1S2B</dd>
+                                                    </div>
+                                                </dl>
+                                                <div class="specification-header">
+                                                    <h2>Product Type</h2>
+                                                </div>
+                                        
+                                                <dl class="specification-details">
+                                                    <div>
+                                                        <dd>Screen Type</dd>
+                                                        <dd>LCD</dd>
+                                                    </div>
+                                                    <div>
+                                                        <dd>Technology Type</dd>
+                                                        <dd>MINI LED (DLED+Local dimming)</dd>
+                                                    </div>
+                                                    <div>
+                                                        <dd>Color gammut</dd>
+                                                        <dd></dd>
+                                                    </div>
+                                                    <div>
+                                                        <dd>Panel Type</dd>
+                                                        <dd>NTSC 85%,DCI-P3 92%</dd>
+                                                    </div>
+                                                </dl>
+                                                <div class="specification-header">
+                                                    <h2>General Inforamtion</h2>
+                                                </div>
+                                        
+                                                <dl class="specification-details">
+                                                    <div>
+                                                        <dd>TV System(Tuner)</dd>
+                                                        <dd>VA</dd>
+                                                    </div>
+                                                    <div>
+                                                        <dd>CPU Core</dd>
+                                                        <dd>DVB-T/T2、DVB-S/S2、CI+</dd>
+                                                    </div>
+                                                    <div>
+                                                        <dd>GPU Core</dd>
+                                                        <dd>CA55* 4 @ 1.3Ghz</dd>
+                                                    </div>
+                                                    <div>
+                                                        <dd>Operation System</dd>
+                                                        <dd>Mali G31 MP2,Open GL ES3.2</dd>
+                                                    </div>
+                                                    <div>
+                                                        <dd>Memory</dd>
+                                                        <dd>androidtv - Android Version R</dd>
+                                                    </div>
+                                                    <div>
+                                                        <dd>Flash</dd>
+                                                        <dd>2GB</dd>
+                                                    </div>
+                                                    <div>
+                                                        <dd>Google TV-Android Version</dd>
+                                                        <dd>16GB</dd>
+                                                    </div>
+                                                    <div>
+                                                        <dd>Google Assistant Built-in</dd>
+                                                        <dd>androidtv - Android Version R</dd>
+                                                    </div>
+                                                    <div>
+                                                        <dd>Works with Alexa</dd>
+                                                        <dd>Yes</dd>
+                                                    </div>
+                                                    <div>
+                                                        <dd>IMAX (DTS)</dd>
+                                                        <dd>No</dd>
+                                                    </div>
+                                                </dl>
+                                                <div class="specification-header">
+                                                    <h2>Audio</h2>
+                                                </div>
+                                        
+                                                <dl class="specification-details">
+                                                    <div>
+                                                        <dd>Audio Power</dd>
+                                                        <dd>15W*2(main)+15W*2(subwoofer) speaker size:2*(1300+500)=3600cc</dd>
+                                                    </div>
+                                                    <div>
+                                                        <dd>Dolby</dd>
+                                                        <dd> MS12 config Z, Dolby Atmos</dd>
+                                                    </div>
+                                                    <div>
+                                                        <dd>DTS</dd>
+                                                        <dd>No</dd>
+                                                    </div>
+                                                    <div>
+                                                        <dd>Sound channel</dd>
+                                                        <dd>2.2 4 Channel</dd>
+                                                    </div>
+                                                    <div>
+                                                        <dd>Speaker type</dd>
+                                                        <dd>Dolby Atmos</dd>
+                                                    </div>
+                                                    <div>
+                                                        <dd>Bluetooth Audio Only</dd>
+                                                        <dd>Yes</dd>
+                                                    </div>
+                                                </dl>
+                                                <div class="specification-header">
+                                                    <h2>Display</h2>
+                                                </div>
+                                        
+                                                <dl class="specification-details">
+                                                    <div>
+                                                        <dd>Resolution</dd>
+                                                        <dd>4K UHD</dd>
+                                                    </div>
+                                                    <div>
+                                                        <dd>Panel Resolution</dd>
+                                                        <dd>3840*2160</dd>
+                                                    </div>
+                                                    <div>
+                                                        <dd>Aspect Ratio</dd>
+                                                        <dd>16:9</dd>
+                                                    </div>
+                                                    <div>
+                                                        <dd>Refresh Rate</dd>
+                                                        <dd>120Hz</dd>
+                                                    </div>
+                                                    <div>
+                                                        <dd>Dolby Vision</dd>
+                                                        <dd>Dolby Vision</dd>
+                                                    </div>
+                                                    <div>
+                                                        <dd>HLG</dd>
+                                                        <dd>YES</dd>
+                                                    </div>
+                                                    <div>
+                                                        <dd>HDR 10+</dd>
+                                                        <dd>HDR10</dd>
+                                                    </div>
+                                                    <div>
+                                                        <dd>Contrast Ratio(Dynamic)</dd>
+                                                        <dd>6000:1 (typ.)</dd>
+                                                    </div>
+                                                    <div>
+                                                        <dd>Local Dimming</dd>
+                                                        <dd>Yes, 192 zones</dd>
+                                                    </div>
+                                                    <div>
+                                                        <dd>Brightness</dd>
+                                                        <dd>400nit(Min)/450nit(Typ), 650nit(Peak)</dd>
+                                                    </div>
+                                                    <div>
+                                                        <dd>TUV Eye Protection</dd>
+                                                        <dd>No</dd>
+                                                    </div>
+                                                </dl>
+                                                <div class="specification-header">
+                                                    <h2>Connectivity</h2>
+                                                </div>
+                                        
+                                                <dl class="specification-details">
+                                                    <div>
+                                                        <dd>BlueTooth</dd>
+                                                        <dd>Yes</dd>
+                                                    </div>
+                                                    <div>
+                                                        <dd>Wi-Fi</dd>
+                                                        <dd>RTD8822/WIFI5, integrted 2*2 b/g/n/ac, 2.4G/5G</dd>
+                                                    </div>
+                                                    <div>
+                                                        <dd>CI</dd>
+                                                        <dd></dd>
+                                                    </div>
+                                                    <div>
+                                                        <dd>RJ45</dd>
+                                                        <dd></dd>
+                                                    </div>
+                                                    <div>
+                                                        <dd>OPTICAL/COAXIAL</dd>
+                                                        <dd></dd>
+                                                    </div>
+                                                    <div>
+                                                        <dd>Earphone</dd>
+                                                        <dd></dd>
+                                                    </div>
+                                                    <div>
+                                                        <dd>Digital Audio Output(SPDIF)</dd>
+                                                        <dd>1S--OPTICAL</dd>
+                                                    </div>
+                                                    <div>
+                                                        <dd>RF Input</dd>
+                                                        <dd>1S---IEC, 1S---F type</dd>
+                                                    </div>
+                                                    <div>
+                                                        <dd>USB</dd>
+                                                        <dd>USB2.0 (5V-0.5A)*1, USB3.0 (5V-0.9A)*1</dd>
+                                                    </div>
+                                                    <div>
+                                                        <dd>HDMI</dd>
+                                                        <dd>HDMI 2.1 *3 (4K2K 60Hz)</dd>
+                                                    </div>
+                                                    <div>
+                                                        <dd>AC in </dd>
+                                                        <dd></dd>
+                                                    </div>
+                                                    <div>
+                                                        <dd>eARC</dd>
+                                                        <dd>Yes</dd>
+                                                    </div>
+                                                    <div>
+                                                        <dd>ALLM</dd>
+                                                        <dd>Yes</dd>
+                                                    </div>
+                                                    <div>
+                                                        <dd>VRR</dd>
+                                                        <dd>Yes</dd>
+                                                    </div>
+                                                    <div>
+                                                        <dd>Freesync</dd>
+                                                        <dd>No</dd>
+                                                    </div>
+                                                    <div>
+                                                        <dd>HDMI CEC</dd>
+                                                        <dd>Yes, with cerfication</dd>
+                                                    </div>
+                                                </dl>
+                                                <div class="specification-header">
+                                                    <h2>Additional Feature</h2>
+                                                </div>
+                                        
+                                                <dl class="specification-details">
+                                                    <div>
+                                                        <dd>PVR/Timeshift</dd>
+                                                        <dd>Yes, Only for FTA</dd>
+                                                    </div>
+                                                    <div>
+                                                        <dd>EPG</dd>
+                                                        <dd>DVB EPG --Yes; IP EPG ---No</dd>
+                                                    </div>
+                                                    <div>
+                                                        <dd>Subtitle</dd>
+                                                        <dd>Yes(DTV)</dd>
+                                                    </div>
+                                                </dl>
+                                                <div class="specification-header">
+                                                    <h2>Dimensions</h2>
+                                                </div>
+                                        
+                                                <dl class="specification-details">
+                                                    <div>
+                                                        <dd>Vesa Wall Mount Support</dd>
+                                                        <dd>WMB533</dd>
+                                                    </div>
+                                                    <div>
+                                                        <dd>Wall Mount Size(WXH)</dd>
+                                                        <dd>600*400</dd>
+                                                    </div>
+                                                    <div>
+                                                        <dd>Set Size with Stand (WxHxD)</dd>
+                                                        <dd>2181.6*479.1*1358.4</dd>
+                                                    </div>
+                                                    <div>
+                                                        <dd>Set Size without Stand (WxHxD)</dd>
+                                                        <dd>2181.6*110.6*1257.5</dd>
+                                                    </div>
+                                                    <div>
+                                                        <dd>Package Dimensions (WxHxD)</dd>
+                                                        <dd>2376*273*1486</dd>
+                                                    </div>
+                                                </dl>
+                                                <div class="specification-header">
+                                                    <h2>Weight</h2>
+                                                </div>
+                                        
+                                                <dl class="specification-details">
+                                                    <div>
+                                                        <dd>Net Weight Without Stand (Kg)</dd>
+                                                        <dd>74</dd>
+                                                    </div>
+                                                    <div>
+                                                        <dd>Net Weight With Stand (Kg)</dd>
+                                                        <dd>70</dd>
+                                                    </div>
+                                                    <div>
+                                                        <dd>Gross Weight With Packaging (Kg)</dd>
+                                                        <dd>110</dd>
+                                                    </div>
+                                                </dl>
+                                                <div class="specification-header">
+                                                    <h2>Container Loading</h2>
+                                                </div>
+                                        
+                                                <dl class="specification-details">
+                                                    <div>
+                                                        <dd>20GP</dd>
+                                                        <dd>/</dd>
+                                                    </div>
+                                                    <div>
+                                                        <dd>40GP</dd>
+                                                        <dd>/</dd>
+                                                    </div>
+                                                    <div>
+                                                        <dd>40HQ</dd>
+                                                        <dd>40</dd>
+                                                    </div>
+                                                </dl>
+                                                <div class="specification-header">
+                                                    <h2>CBM</h2>
+                                                </div>
+                                        
+                                                <dl class="specification-details">
+                                                    <div>
+                                                        <dd>CBM</dd>
+                                                        <dd>0.963890928</dd>
+                                                    </div>
+                                        
+                                        
+                                        
+                                                </dl>
+                                            </section></div>
+                                        </div>
+                                    </div>
+                               
+                        
+                                  
+                                    
+                             
+                                </div>
+                </div> 
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Best sellers -->
+<div class="product-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="section-title">
+                    <h3>Related Products</h3>
+                </div>
+            </div>
+        </div>
+        <div class="product-area-inner">
+            <div class="row">
+                <div class="product-carousel-active-2 owl-carousel owl-loaded owl-drag">
+                    
+                    
+                
+                    
+                    
+                      <owl-carousel-o [options]="customOptions4" class="owl-stage-outer">
+                
+                        <ng-container *ngFor="let dataItem of ProductsListrelated  " class="owl-stage">
+<<<<<<< HEAD
+                          <ng-template    carouselSlide class="owl-item cloned" *ngIf="dataItem.draft != 'true'" >
+
+                        <div class="col-sm-12" >
+=======
+                          <ng-template    carouselSlide class="owl-item cloned" >
+
+                        <div class="col-sm-12">
+>>>>>>> ed7d4e9eade1c34b7d004d7cc37cb28b81ededb7
+                        <!-- single product -->
+                        <div class="single-product-area">
+                            <div class="product-wrapper gridview">
+                                <div class="list-col4">
+                                    <div class="product-image">
+                                        <a href="#">
+                                            <img src="{{imageurl}}{{dataItem.singleImage }}" alt="">
+                                        </a>
+                                        <div class="quickviewbtn" >
+                                            <a [routerLink]="['/details', dataItem.product_ID]" data-original-title="Quick View"><i style="color: #073b4c!important;" class="fa fa-search"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="list-col8">
+                                    <div class="product-info">
+                                        <h2 class="product-card-title" style="display: -webkit-box;
+<<<<<<< HEAD
+                                    
+                                        -webkit-box-orient: vertical;
+                                        overflow: hidden;
+                                        text-overflow: ellipsis;"><a  >{{dataItem.name}}</a></h2>
+                                        <div class="product-rattings">
+=======
+                                        -webkit-line-clamp: 2;
+                                        -webkit-box-orient: vertical;
+                                        overflow: hidden;
+                                        text-overflow: ellipsis;"><a style="color: #073b4c!important;" >{{dataItem.name}}</a></h2>
+                                        <!-- <div class="product-rattings">
+>>>>>>> ed7d4e9eade1c34b7d004d7cc37cb28b81ededb7
+                                            <span><i class="fa fa-star"></i></span>
+                                            <span><i class="fa fa-star"></i></span>
+                                            <span><i class="fa fa-star"></i></span>
+                                            <span><i class="fa fa-star-half-o"></i></span>
+                                            <span><i class="fa fa-star-o"></i></span>
+<<<<<<< HEAD
+                                        </div> 
+=======
+                                        </div>  -->
+>>>>>>> ed7d4e9eade1c34b7d004d7cc37cb28b81ededb7
+                                    <div class="product-card-spans" >
+                                        <ng-container *ngFor="let user of dataItem.price; last as isLast">
+                                       <span *ngIf="isLast"  class="price">
+                                        {{user.price}}<small>$</small>   
+                                    </span>
+<<<<<<< HEAD
+                                    </ng-container>
+                                    <span   class="quantity">
+                                        Min-Order: {{dataItem.minqty}}pcs
+                                    </span>
+                                    <div class="product-card-icons">
+                                        <div class="add-to-cart">
+                                            <a [routerLink]="['/details', dataItem.product_ID]" alt="Add to cart"> <i class="fa fa-shopping-cart"></i></a>
+                                        </div>
+                                        <ul class="actions">
+                                            <li  id="favicon-toggle"><i style="color:white" id="fav-icon-change" class="ion-android-favorite-outline"></i></li>
+                                            <li><a href="#"><i style="color:white" class="ion-ios-shuffle-strong"></i></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+=======
+                                </ng-container>
+                                    <span   class="quantity">
+                                        Min-Order: {{dataItem.minqty}}pcs
+                                    </span>
+                           
+>>>>>>> ed7d4e9eade1c34b7d004d7cc37cb28b81ededb7
+                                    
+                                    </div>
+                            
+                                        
+                                    </div>
+                                    <div class="product-hidden">
+                                        <div class="card-hover-flex">
+                                         <div class="star-actions product-card-actions">
+                                         </div>
+                                         </div>
+                                     </div>
+                  
+                                </div>
+                            </div>
+                        </div>
+                   
+                    </div>
+            </ng-template> 
+        </ng-container>
+ 
+      </owl-carousel-o>
+                  </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Best sellers end -->
+<div id="dk"></div>
